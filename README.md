@@ -15,6 +15,21 @@ Legacy repos are **not replaced**. This workspace:
 - Implements in `sv_frontend` via focused PRs (file ownership pods).
 - Promotes index rows back to `SV_UPF_SPEC` when gates pass.
 
+## Git identity
+
+Set once on your machine (agent cannot run `git config` for you):
+
+```bash
+git config --global user.name "naeemxnorabbasi"
+git config --global user.email "naeemxnorabbasi@gmail.com"
+```
+
+Or per-commit in this repo only:
+
+```bash
+source scripts/git_commit_env.sh
+```
+
 ## Quick start
 
 ```bash
