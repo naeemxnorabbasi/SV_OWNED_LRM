@@ -1,0 +1,13 @@
+{
+  "folders": [
+    { "name": "owned-lrm", "path": "." },
+    { "name": "spec-legacy", "path": "../SV_UPF_SPEC" },
+    { "name": "sv_frontend", "path": "../sv_frontend" },
+    { "name": "sv_frontend_eval", "path": "../sv_frontend_eval" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true
+    }
+  }
+}

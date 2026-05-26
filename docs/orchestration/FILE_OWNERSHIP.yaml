@@ -1,0 +1,58 @@
+# Megaswarm file ownership — enforced for sv_frontend PRs from this program
+version: 1
+updated: 2026-05-28
+
+merge_train:
+  integrators_max: 5
+  parser_cpp_max_concurrent: 1
+
+pods:
+  orchestrator:
+    paths:
+      - SV_OWNED_LRM/docs/**
+      - SV_OWNED_LRM/scripts/**
+  lrm_indexer:
+    paths:
+      - SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
+  conformance:
+    paths:
+      - sv_frontend/docs/compliance/**
+      - sv_frontend/docs/conformance/**
+  parser_tokens:
+    paths:
+      - sv_frontend/cpp/compiler/src/parser_tokens.cpp
+  parser_skip:
+    paths:
+      - sv_frontend/cpp/compiler/src/parser_skip.cpp
+  parser_expr:
+    paths:
+      - sv_frontend/cpp/compiler/src/parser_expr.cpp
+  parser_module:
+    paths:
+      - sv_frontend/cpp/compiler/src/parser.cpp
+  parser_generate:
+    paths:
+      - sv_frontend/cpp/compiler/src/parser_generate.cpp
+  parser_always:
+    paths:
+      - sv_frontend/cpp/compiler/src/parser_always.cpp
+  parser_sva:
+    paths:
+      - sv_frontend/cpp/compiler/src/sva_parse.cpp
+  sema:
+    paths:
+      - sv_frontend/cpp/compiler/include/svfe/sema_context.hpp
+      - sv_frontend/cpp/compiler/src/sema_context.cpp
+  lower:
+    paths:
+      - sv_frontend/cpp/compiler/src/ir_lower.cpp
+  eval_corpus:
+    paths:
+      - sv_frontend_eval/corpus/**
+  tests_m5:
+    paths:
+      - sv_frontend/tests/conformance/test_sv_matrix.py
+
+blocked_pairs:
+  - [parser_module, parser_generate]
+  - [parser_module, parser_always]

@@ -1,0 +1,39 @@
+version: 1
+program: owned-full-lrm
+workspace: SV_OWNED_LRM
+updated: 2026-05-28
+active_phase: owned-lrm-wave0-complete
+
+north_star: "100% IEEE 1800-2017 owned C++ — v4.0-owned-lrm-cert"
+legacy_program: ../SV_UPF_SPEC
+legacy_untouched: true
+
+repos:
+  spec: ../SV_UPF_SPEC
+  product: ../sv_frontend
+  eval: ../sv_frontend_eval
+
+metrics:
+  lrm_index_source: ../SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
+  lrm_index_total: 449
+  gap_clauses: 274
+  st_owned_clause_tasks: 274
+  st_chapter_gates: 26
+  st_wave0_tasks: 7
+  backlog_total_subtasks: 307
+
+generator:
+  script: scripts/generate_owned_backlog.py
+  registry: docs/orchestration/OWNED_WAVE_REGISTRY.yaml
+  backlog: docs/orchestration/phase_backlog_owned.yaml
+
+last_completed_subtask: ST-W0-06
+next_orchestrator_actions:
+  - "Run: python3 scripts/generate_owned_backlog.py"
+  - "Dispatch ST-OWNED-* from phase_backlog_owned.yaml (chapter 9 highest count)"
+  - "Promote clauses back to SV_UPF_SPEC index when gates pass"
+
+gates:
+  autopilot: ../sv_frontend/scripts/run_autopilot_gate.sh
+  oracle_farm: ../sv_frontend/scripts/run_oracle_farm.sh
+  workspace_check: scripts/check_workspace.py

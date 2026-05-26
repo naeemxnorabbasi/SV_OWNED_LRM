@@ -1,0 +1,31 @@
+# SV_OWNED_LRM workspace — paths to legacy repos (read-mostly inheritance)
+version: 1
+name: sv-owned-lrm-product
+updated: 2026-05-28
+
+north_star: >-
+  100% IEEE 1800-2017 owned C++ implementation with commercial quality gates.
+  Legacy hybrid product (sv_frontend + SCOPE-LOCK v1.x) stays untouched.
+
+repos:
+  # Canonical LRM index — read for gap analysis; promotions flow back via PR
+  spec_root: ../SV_UPF_SPEC
+  lrm_clause_index: ../SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
+  requirements_index: ../SV_UPF_SPEC/SV_SPEC/requirements_index.yaml
+
+  # Implementation + tests (owned compiler lives here)
+  product: ../sv_frontend
+  eval: ../sv_frontend_eval
+
+inherit:
+  # Copy/sync policy — do not fork; PR upstream when stable
+  autopilot_gate: ../sv_frontend/scripts/run_autopilot_gate.sh
+  oracle_farm: ../sv_frontend/scripts/run_oracle_farm.sh
+  file_ownership: docs/orchestration/FILE_OWNERSHIP.yaml
+  clause_contract_schema: schemas/clause_factory_contract.yaml
+
+product_identity:
+  name: sv-owned-lrm
+  cert_target: v4.0-owned-lrm-cert
+  ir_schema: "3.0"
+  slang_role: regression_oracle_only

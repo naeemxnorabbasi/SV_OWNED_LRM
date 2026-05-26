@@ -1,0 +1,35 @@
+# Example — copy to contracts/ST-OWNED-<ch>-<nnn>.yaml when starting work
+
+owned_id: OWNED-9-001
+st_id: ST-OWNED-9-001
+lrm_clause_id: LRM-EXAMPLE
+lrm_section: "9.1"
+title: "Example procedural clause"
+
+owned_must:
+  - Parse and lower the construct on owned backend.
+  - Export connectivity / procedural IR per IR_SCHEMA_V3.md.
+
+oracle:
+  driver: slang
+  parity_min: 0.99
+  corpus_stems:
+    - always_comb
+
+tests:
+  m5_test_id: null
+  feature_test_stem: always_comb
+  reference_projects: []
+
+implementation:
+  pod: parser_always
+  cpp_files:
+    - sv_frontend/cpp/compiler/src/parser.cpp
+  ir_extensions: []
+
+promotion:
+  from_status: partial
+  to_status: supported
+  matrix_ids: []
+  same_commit:
+    - SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
