@@ -37,8 +37,16 @@ status_by_id:
   ST-OWNED-9-003: completed
   ST-OWNED-9-004: completed
   ST-OWNED-9-005: completed
+  ST-OWNED-9-006: completed
   ST-OWNED-9-007: completed
+  ST-OWNED-9-008: completed
+  ST-OWNED-9-009: completed
+  ST-OWNED-9-010: deferred
+  ST-OWNED-9-011: completed
+  ST-OWNED-9-012: completed
   ST-OWNED-9-014: deferred
+  ST-OWNED-9-015: completed
+  ST-OWNED-9-016: completed
   ST-OWNED-9-017: deferred
   ST-OWNED-9-018: deferred
   ST-OWNED-9-019: deferred
@@ -52,6 +60,8 @@ status_by_id:
   ST-OWNED-9-029: deferred
   ST-OWNED-9-032: deferred
   ST-OWNED-9-033: deferred
+  ST-OWNED-9-042: deferred
+  ST-OWNED-9-043: deferred
   ST-OWNED-9-050: deferred
   ST-OWNED-9-051: deferred
   ST-OWNED-9-053: deferred
@@ -59,6 +69,8 @@ status_by_id:
   ST-OWNED-9-056: deferred
   ST-OWNED-9-057: deferred
   ST-OWNED-9-058: deferred
+  ST-OWNED-9-073: deferred
+  ST-OWNED-9-080: deferred
   ST-OWNED-9-081: deferred
   ST-OWNED-9-084: deferred
   ST-OWNED-9-087: deferred

@@ -1,15 +1,15 @@
 schema_version: "1.0"
-st_id: ST-OWNED-9-007
-lrm_clause_id: LRM-CASE-ENDCASE-PARSE
-title: case/endcase in always_comb
+st_id: ST-OWNED-9-012
+lrm_clause_id: LRM-COMB-PLUS-FF-RTL
+title: comb_plus_ff corpus
 status: completed
 
 owned_must:
   - Owned backend satisfies clause with registered M5 evidence.
 
 tests:
-  m5_test_id: test_sv_m5_143_always_comb_case_labels_owned
-  feature_test_stem: always_comb_case_mux
+  m5_test_id: test_sv_m5_117_sim_unified_comb_plus_ff_owned_ir
+  feature_test_stem: comb_plus_ff
 
 promotion:
   from_status: partial

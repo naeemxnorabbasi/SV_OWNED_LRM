@@ -23,12 +23,12 @@ by_chapter:
   '6': 8
   '7': 3
   '8': 2
-  '9': 89
+  '9': 81
   misc: 1
 by_status:
   delegated: 0
-  partial: 195
-  supported: 205
+  partial: 187
+  supported: 213
   unsupported: 49
-gap_units: 266
+gap_units: 258
 total_indexed: 449

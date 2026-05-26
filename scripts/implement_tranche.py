@@ -18,6 +18,7 @@ SPEC = (ROOT / WS["repos"]["spec_root"]).resolve()
 INDEX = SPEC / "SV_SPEC" / "lrm_clause_index.yaml"
 MATRIX = PRODUCT / "docs/compliance/LRM_COVERAGE_MATRIX.md"
 PICKER = ROOT / "scripts/pick_next_owned_task.py"
+OVERLAY = ROOT / "docs/orchestration/backlog_status_overlay.yaml"
 
 # st_id -> (pytest -k, lrm_clause_id, m5_test_id, lrm_section filter, index batch)
 TrancheSpec = tuple[str, str, str, str | None, str]
@@ -57,12 +58,61 @@ TRANCHES: dict[str, TrancheSpec] = {
         "9.4",
         "OWNED-CH9-005",
     ),
+    "ST-OWNED-9-006": (
+        "test_sv_m5_244_case_arm_if_expr_guard_owned",
+        "LRM-CASE-ARM-IF-EXPR-GUARD",
+        "test_sv_m5_244_case_arm_if_expr_guard_owned",
+        "9.4.1",
+        "OWNED-CH9-006",
+    ),
     "ST-OWNED-9-007": (
-        "test_sv_m5_129_sim_nba_edges_from_statement_ir",
-        "LRM-ALWAYS-FF-STATEMENT-BODY",
-        "test_sv_m5_129_sim_nba_edges_from_statement_ir",
-        "9.2",
+        "test_sv_m5_143_always_comb_case_labels_owned",
+        "LRM-CASE-ENDCASE-PARSE",
+        "test_sv_m5_143_always_comb_case_labels_owned",
+        "9.4.1",
         "OWNED-CH9-007",
+    ),
+    "ST-OWNED-9-008": (
+        "test_sv_m5_143_always_comb_case_labels_owned",
+        "LRM-CASE-LABEL-IR",
+        "test_sv_m5_143_always_comb_case_labels_owned",
+        "9.4.1",
+        "OWNED-CH9-008",
+    ),
+    "ST-OWNED-9-009": (
+        "test_sv_m5_153_nested_case_pipe_labels_owned",
+        "LRM-CASE-LABEL-PATH",
+        "test_sv_m5_153_nested_case_pipe_labels_owned",
+        "9.4.1",
+        "OWNED-CH9-009",
+    ),
+    "ST-OWNED-9-011": (
+        "test_sv_m5_147_comb_if_guard_metadata_owned",
+        "LRM-COMB-IF-GUARD-IR",
+        "test_sv_m5_147_comb_if_guard_metadata_owned",
+        "9.2.1",
+        "OWNED-CH9-011",
+    ),
+    "ST-OWNED-9-012": (
+        "test_sv_m5_117_sim_unified_comb_plus_ff_owned_ir",
+        "LRM-COMB-PLUS-FF-RTL",
+        "test_sv_m5_117_sim_unified_comb_plus_ff_owned_ir",
+        "9.2",
+        "OWNED-CH9-012",
+    ),
+    "ST-OWNED-9-015": (
+        "test_sv_m5_134_nba_if_guard_export_owned",
+        "LRM-ELSE-IF-CHAIN",
+        "test_sv_m5_134_nba_if_guard_export_owned",
+        "9.2.1",
+        "OWNED-CH9-015",
+    ),
+    "ST-OWNED-9-016": (
+        "test_sv_m5_122_sim_region_scheduled_detect_owned_ir",
+        "LRM-EVENT-REGION-ORDER",
+        "test_sv_m5_122_sim_region_scheduled_detect_owned_ir",
+        "9",
+        "OWNED-CH9-016",
     ),
 }
 
@@ -151,8 +201,7 @@ title: {title}
 status: completed
 
 owned_must:
-  - Owned C++ parses always_comb and exports AlwaysComb procedural IR.
-  - scheduling_region active_comb with continuous_assign statement bodies.
+  - Owned backend satisfies clause with registered M5 evidence.
 
 tests:
   m5_test_id: {test_id}
@@ -173,27 +222,56 @@ CONTRACT_META: dict[str, tuple[str, str]] = {
     "ST-OWNED-9-003": ("always_comb procedural metadata", "always_comb"),
     "ST-OWNED-9-004": ("always_comb XOR sim statement-backed comb", "always_comb"),
     "ST-OWNED-9-005": ("always_ff", "always_ff"),
-    "ST-OWNED-9-007": ("always_ff body NBA statements", "always_ff"),
+    "ST-OWNED-9-006": ("case arm if_expr guard", "always_comb_case_arm_if_expr"),
+    "ST-OWNED-9-007": ("case/endcase in always_comb", "always_comb_case_mux"),
+    "ST-OWNED-9-008": ("case_label metadata", "always_comb_case_mux"),
+    "ST-OWNED-9-009": ("hierarchical case_label paths", "always_comb_nested_case"),
+    "ST-OWNED-9-011": ("comb if_pos/if_neg guard metadata", "always_comb_if_en"),
+    "ST-OWNED-9-012": ("comb_plus_ff corpus", "comb_plus_ff"),
+    "ST-OWNED-9-015": ("else if chain in always bodies", "always_ff"),
+    "ST-OWNED-9-016": ("active region order comb before clocked", "comb_plus_ff"),
 }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("st_id", help="ST-OWNED-* id")
+    parser.add_argument("st_id", nargs="?", help="ST-OWNED-* id")
+    parser.add_argument(
+        "--batch",
+        action="store_true",
+        help="Run all registered tranches not yet completed in overlay",
+    )
     args = parser.parse_args()
-    if args.st_id not in TRANCHES:
-        print(f"No registered tranche for {args.st_id}", file=sys.stderr)
+    if args.batch:
+        overlay = yaml.safe_load(OVERLAY.read_text(encoding="utf-8")) if OVERLAY.is_file() else {}
+        done = set((overlay.get("status_by_id") or {}).keys())
+        failed = 0
+        for st_id in sorted(TRANCHES.keys()):
+            if st_id in done and (overlay.get("status_by_id") or {}).get(st_id) == "completed":
+                continue
+            print(f"\n######## {st_id} ########")
+            if main_for(st_id) != 0:
+                failed += 1
+        return 1 if failed else 0
+    if not args.st_id:
+        parser.error("st_id or --batch required")
+    return main_for(args.st_id)
+
+
+def main_for(st_id: str) -> int:
+    if st_id not in TRANCHES:
+        print(f"No registered tranche for {st_id}", file=sys.stderr)
         return 1
-    expr, lrm_id, test_id, lrm_section, batch = TRANCHES[args.st_id]
-    title, stem = CONTRACT_META.get(args.st_id, (lrm_id, "feature_tests"))
+    expr, lrm_id, test_id, lrm_section, batch = TRANCHES[st_id]
+    title, stem = CONTRACT_META.get(st_id, (lrm_id, "feature_tests"))
     print(f"== pytest {expr} ==")
     run_pytest(expr)
     print(f"== promote {lrm_id} (section {lrm_section}) ==")
     promote_index(lrm_id, test_id, lrm_section, batch)
     update_matrix(lrm_id, test_id, lrm_section)
-    write_contract(args.st_id, lrm_id, test_id, title, stem)
-    mark_complete(args.st_id)
-    print(f"OK: {args.st_id} tranche complete")
+    write_contract(st_id, lrm_id, test_id, title, stem)
+    mark_complete(st_id)
+    print(f"OK: {st_id} tranche complete")
     return 0
 
 

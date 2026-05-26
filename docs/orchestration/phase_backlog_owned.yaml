@@ -356,7 +356,7 @@ subtasks:
 - id: ST-OWNED-GATE-CH9
   phase: owned-lrm
   track: orchestrator
-  title: Chapter gate — Procedural blocks (89 clauses)
+  title: Chapter gate — Procedural blocks (81 clauses)
   status: pending
   depends_on:
   - ST-OWNED-GATE-W0
@@ -364,7 +364,7 @@ subtasks:
   agent: orchestrator
   metadata:
     chapter: '9'
-    clause_count: 89
+    clause_count: 81
 - id: ST-OWNED-GATE-CHmisc
   phase: owned-lrm
   track: orchestrator
@@ -4000,244 +4000,84 @@ subtasks:
 - id: ST-OWNED-9-006
   phase: owned-lrm
   track: B
-  title: 'OWNED: Case mux arm if (en && valid) if_expr guard export and sim'
-  status: pending
+  title: 'OWNED: Case procedural region indexed'
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
   - contracts/ST-OWNED-9-006.yaml
   - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-CASE-ARM-IF-EXPR-GUARD to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-ARM-IF-EXPR-GUARD; run_autopilot_gate.sh
+  - 'SV_UPF_SPEC: promote LRM-CASE-REGION-INDEX to supported/owned'
+  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-REGION-INDEX; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
     registry_id: OWNED-9-006
-    lrm_clause_id: LRM-CASE-ARM-IF-EXPR-GUARD
-    lrm_section: 9.4.1
+    lrm_clause_id: LRM-CASE-REGION-INDEX
+    lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
 - id: ST-OWNED-9-007
   phase: owned-lrm
   track: B
-  title: 'OWNED: case/endcase in procedural always_comb bodies'
+  title: 'OWNED: Delay control'
   status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
   - contracts/ST-OWNED-9-007.yaml
   - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-CASE-ENDCASE-PARSE to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-ENDCASE-PARSE; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-007
-    lrm_clause_id: LRM-CASE-ENDCASE-PARSE
-    lrm_section: 9.4.1
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-008
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: case_label metadata on procedural statements'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-008.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-CASE-LABEL-IR to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-LABEL-IR; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-008
-    lrm_clause_id: LRM-CASE-LABEL-IR
-    lrm_section: 9.4.1
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-009
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: Hierarchical case_label paths with pipe separator'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-009.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-CASE-LABEL-PATH to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-LABEL-PATH; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-009
-    lrm_clause_id: LRM-CASE-LABEL-PATH
-    lrm_section: 9.4.1
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-010
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: Case procedural region indexed'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-010.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-CASE-REGION-INDEX to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-REGION-INDEX; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-010
-    lrm_clause_id: LRM-CASE-REGION-INDEX
-    lrm_section: '9'
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-011
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: Combinational if_pos/if_neg guard metadata'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-011.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-COMB-IF-GUARD-IR to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-COMB-IF-GUARD-IR; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-011
-    lrm_clause_id: LRM-COMB-IF-GUARD-IR
-    lrm_section: 9.2.1
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-012
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: comb_plus_ff eval corpus (always_comb + always_ff)'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-012.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-COMB-PLUS-FF-RTL to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-COMB-PLUS-FF-RTL; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-012
-    lrm_clause_id: LRM-COMB-PLUS-FF-RTL
-    lrm_section: '9.2'
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-013
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: Delay control'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-013.yaml
-  - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-DELAY-CONTROL-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-DELAY-CONTROL-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-013
+    registry_id: OWNED-9-007
     lrm_clause_id: LRM-DELAY-CONTROL-UNSUPPORTED
     lrm_section: '9.7'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-014
+- id: ST-OWNED-9-008
   phase: owned-lrm
   track: B
   title: 'OWNED: disable procedural (roadmap)'
-  status: deferred
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-014.yaml
+  - contracts/ST-OWNED-9-008.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-DISABLE-PROC-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-DISABLE-PROC-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-014
+    registry_id: OWNED-9-008
     lrm_clause_id: LRM-DISABLE-PROC-UNSUPPORTED
     lrm_section: '9.6'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-015
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: else if chain parsing in always bodies'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-015.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-ELSE-IF-CHAIN to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-ELSE-IF-CHAIN; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-015
-    lrm_clause_id: LRM-ELSE-IF-CHAIN
-    lrm_section: 9.2.1
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-016
-  phase: owned-lrm
-  track: B
-  title: 'OWNED: Active region order — comb before clocked NBA'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH9
-  deliverables:
-  - contracts/ST-OWNED-9-016.yaml
-  - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-EVENT-REGION-ORDER to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-EVENT-REGION-ORDER; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-9-016
-    lrm_clause_id: LRM-EVENT-REGION-ORDER
-    lrm_section: '9'
-    pod: parser_always
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-9-017
+- id: ST-OWNED-9-009
   phase: owned-lrm
   track: B
   title: 'OWNED: Event trigger (roadmap)'
-  status: deferred
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-017.yaml
+  - contracts/ST-OWNED-9-009.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-EVENT-TRIGGER-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-EVENT-TRIGGER-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-017
+    registry_id: OWNED-9-009
     lrm_clause_id: LRM-EVENT-TRIGGER-UNSUPPORTED
     lrm_section: '9.7'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-018
+- id: ST-OWNED-9-010
   phase: owned-lrm
   track: B
   title: 'OWNED: forever loop (roadmap)'
@@ -4245,79 +4085,79 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-018.yaml
+  - contracts/ST-OWNED-9-010.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-FOREVER-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-FOREVER-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-018
+    registry_id: OWNED-9-010
     lrm_clause_id: LRM-FOREVER-UNSUPPORTED
     lrm_section: '9.6'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-019
+- id: ST-OWNED-9-011
   phase: owned-lrm
   track: B
   title: 'OWNED: fork/join procedural (roadmap)'
-  status: deferred
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-019.yaml
+  - contracts/ST-OWNED-9-011.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-FORK-JOIN-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-FORK-JOIN-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-019
+    registry_id: OWNED-9-011
     lrm_clause_id: LRM-FORK-JOIN-UNSUPPORTED
     lrm_section: '9.6'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-020
+- id: ST-OWNED-9-012
   phase: owned-lrm
   track: B
   title: 'OWNED: Generic identifier if_pos/if_neg comb guards'
-  status: deferred
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-020.yaml
+  - contracts/ST-OWNED-9-012.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-GENERIC-IF-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-GENERIC-IF-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-020
+    registry_id: OWNED-9-012
     lrm_clause_id: LRM-GENERIC-IF-GUARD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-021
+- id: ST-OWNED-9-013
   phase: owned-lrm
   track: B
   title: 'OWNED: if/else begin/end NBA guard propagation'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-021.yaml
+  - contracts/ST-OWNED-9-013.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-IF-BEGIN-END-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-IF-BEGIN-END-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-021
+    registry_id: OWNED-9-013
     lrm_clause_id: LRM-IF-BEGIN-END-GUARD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-022
+- id: ST-OWNED-9-014
   phase: owned-lrm
   track: B
   title: 'OWNED: Concat/replication conditions in if_expr comb guards'
@@ -4325,59 +4165,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-022.yaml
+  - contracts/ST-OWNED-9-014.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-IF-CONCAT-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-IF-CONCAT-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-022
+    registry_id: OWNED-9-014
     lrm_clause_id: LRM-IF-CONCAT-GUARD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-023
+- id: ST-OWNED-9-015
   phase: owned-lrm
   track: B
   title: 'OWNED: always_comb if_expr guards for &&, ||, and =='
-  status: deferred
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-023.yaml
+  - contracts/ST-OWNED-9-015.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-IF-EXPR-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-IF-EXPR-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-023
+    registry_id: OWNED-9-015
     lrm_clause_id: LRM-IF-EXPR-GUARD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-024
+- id: ST-OWNED-9-016
   phase: owned-lrm
   track: B
   title: 'OWNED: initial procedural block'
-  status: deferred
+  status: completed
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-024.yaml
+  - contracts/ST-OWNED-9-016.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-INITIAL-BLOCK to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-INITIAL-BLOCK; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-024
+    registry_id: OWNED-9-016
     lrm_clause_id: LRM-INITIAL-BLOCK
     lrm_section: '9.3'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-025
+- id: ST-OWNED-9-017
   phase: owned-lrm
   track: B
   title: 'OWNED: Initial procedural region — supported subset'
@@ -4385,19 +4225,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-025.yaml
+  - contracts/ST-OWNED-9-017.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-INITIAL-REGION-SUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-INITIAL-REGION-SUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-025
+    registry_id: OWNED-9-017
     lrm_clause_id: LRM-INITIAL-REGION-SUPPORTED
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-026
+- id: ST-OWNED-9-018
   phase: owned-lrm
   track: B
   title: 'OWNED: Named blocks (roadmap)'
@@ -4405,59 +4245,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-026.yaml
+  - contracts/ST-OWNED-9-018.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NAMED-BLOCK-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NAMED-BLOCK-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-026
+    registry_id: OWNED-9-018
     lrm_clause_id: LRM-NAMED-BLOCK-UNSUPPORTED
     lrm_section: '9.3'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-027
+- id: ST-OWNED-9-019
   phase: owned-lrm
   track: B
   title: 'OWNED: NBA update region after posedge clk'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-027.yaml
+  - contracts/ST-OWNED-9-019.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NBA-ACTIVE-REGION to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NBA-ACTIVE-REGION; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-027
+    registry_id: OWNED-9-019
     lrm_clause_id: LRM-NBA-ACTIVE-REGION
     lrm_section: '9.3'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-028
+- id: ST-OWNED-9-020
   phase: owned-lrm
   track: B
   title: 'OWNED: NBA assign statements in always_ff IR'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-028.yaml
+  - contracts/ST-OWNED-9-020.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NBA-ASSIGN-STATEMENT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NBA-ASSIGN-STATEMENT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-028
+    registry_id: OWNED-9-020
     lrm_clause_id: LRM-NBA-ASSIGN-STATEMENT
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-029
+- id: ST-OWNED-9-021
   phase: owned-lrm
   track: B
   title: 'OWNED: if/else NBA guard export (reset_active / reset_inactive)'
@@ -4465,59 +4305,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-029.yaml
+  - contracts/ST-OWNED-9-021.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NBA-IF-GUARD-EXPORT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NBA-IF-GUARD-EXPORT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-029
+    registry_id: OWNED-9-021
     lrm_clause_id: LRM-NBA-IF-GUARD-EXPORT
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-030
+- id: ST-OWNED-9-022
   phase: owned-lrm
   track: B
   title: 'OWNED: Procedural nba_assign literal RHS in statement IR'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-030.yaml
+  - contracts/ST-OWNED-9-022.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NBA-LITERAL-EXPORT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NBA-LITERAL-EXPORT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-030
+    registry_id: OWNED-9-022
     lrm_clause_id: LRM-NBA-LITERAL-EXPORT
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-031
+- id: ST-OWNED-9-023
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case in begin/end with sel2 selector'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-031.yaml
+  - contracts/ST-OWNED-9-023.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NESTED-CASE-BEGIN to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NESTED-CASE-BEGIN; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-031
+    registry_id: OWNED-9-023
     lrm_clause_id: LRM-NESTED-CASE-BEGIN
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-032
+- id: ST-OWNED-9-024
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case inner default priority over outer default'
@@ -4525,19 +4365,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-032.yaml
+  - contracts/ST-OWNED-9-024.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NESTED-CASE-DEFAULT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NESTED-CASE-DEFAULT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-032
+    registry_id: OWNED-9-024
     lrm_clause_id: LRM-NESTED-CASE-DEFAULT
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-033
+- id: ST-OWNED-9-025
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case pipe labels and sim mux (sel/sel2)'
@@ -4545,39 +4385,39 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-033.yaml
+  - contracts/ST-OWNED-9-025.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NESTED-CASE-SIM to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NESTED-CASE-SIM; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-033
+    registry_id: OWNED-9-025
     lrm_clause_id: LRM-NESTED-CASE-SIM
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-034
+- id: ST-OWNED-9-026
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested if/else in always_comb begin blocks'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-034.yaml
+  - contracts/ST-OWNED-9-026.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NESTED-IF-ALWAYS-COMB to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NESTED-IF-ALWAYS-COMB; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-034
+    registry_id: OWNED-9-026
     lrm_clause_id: LRM-NESTED-IF-ALWAYS-COMB
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-035
+- id: ST-OWNED-9-027
   phase: owned-lrm
   track: B
   title: 'OWNED: Nonblocking assignments (NBA)'
@@ -4585,19 +4425,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-035.yaml
+  - contracts/ST-OWNED-9-027.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-NONBLOCKING-ASSIGN-PROC to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-NONBLOCKING-ASSIGN-PROC; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-035
+    registry_id: OWNED-9-027
     lrm_clause_id: LRM-NONBLOCKING-ASSIGN-PROC
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-036
+- id: ST-OWNED-9-028
   phase: owned-lrm
   track: B
   title: 'OWNED: One-hot case item begin blocks with chained if_expr guards'
@@ -4605,39 +4445,39 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-036.yaml
+  - contracts/ST-OWNED-9-028.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-ONEHOT-CASE-BEGIN-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-ONEHOT-CASE-BEGIN-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-036
+    registry_id: OWNED-9-028
     lrm_clause_id: LRM-ONEHOT-CASE-BEGIN-GUARD
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-037
+- id: ST-OWNED-9-029
   phase: owned-lrm
   track: B
   title: 'OWNED: Owned always → always_ff classification'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-037.yaml
+  - contracts/ST-OWNED-9-029.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-OWNED-ALWAYS-CLASSIFY to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-OWNED-ALWAYS-CLASSIFY; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-037
+    registry_id: OWNED-9-029
     lrm_clause_id: LRM-OWNED-ALWAYS-CLASSIFY
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-038
+- id: ST-OWNED-9-030
   phase: owned-lrm
   track: B
   title: 'OWNED: always_ff NBA simulation (owned IR)'
@@ -4645,19 +4485,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-038.yaml
+  - contracts/ST-OWNED-9-030.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-OWNED-ALWAYS-FF-SIM to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-OWNED-ALWAYS-FF-SIM; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-038
+    registry_id: OWNED-9-030
     lrm_clause_id: LRM-OWNED-ALWAYS-FF-SIM
     lrm_section: '9.4'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-039
+- id: ST-OWNED-9-031
   phase: owned-lrm
   track: B
   title: 'OWNED: Owned IR active_comb / active_clocked region tags'
@@ -4665,59 +4505,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-039.yaml
+  - contracts/ST-OWNED-9-031.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-OWNED-PROCEDURAL-REGIONS to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-OWNED-PROCEDURAL-REGIONS; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-039
+    registry_id: OWNED-9-031
     lrm_clause_id: LRM-OWNED-PROCEDURAL-REGIONS
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-040
+- id: ST-OWNED-9-032
   phase: owned-lrm
   track: B
   title: 'OWNED: Owned parser lowers statements into procedural IR'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-040.yaml
+  - contracts/ST-OWNED-9-032.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-OWNED-STATEMENT-LOWERING to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-OWNED-STATEMENT-LOWERING; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-040
+    registry_id: OWNED-9-032
     lrm_clause_id: LRM-OWNED-STATEMENT-LOWERING
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-041
+- id: ST-OWNED-9-033
   phase: owned-lrm
   track: B
   title: 'OWNED: Parser always @* sensitivity list without parentheses'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-041.yaml
+  - contracts/ST-OWNED-9-033.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PARSER-ALWAYS-AT-STAR to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PARSER-ALWAYS-AT-STAR; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-041
+    registry_id: OWNED-9-033
     lrm_clause_id: LRM-PARSER-ALWAYS-AT-STAR
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-042
+- id: ST-OWNED-9-034
   phase: owned-lrm
   track: B
   title: 'OWNED: Parser skip task/function bodies through endtask/endfunction'
@@ -4725,19 +4565,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-042.yaml
+  - contracts/ST-OWNED-9-034.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PARSER-TASK-ENDTASK-SKIP to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PARSER-TASK-ENDTASK-SKIP; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-042
+    registry_id: OWNED-9-034
     lrm_clause_id: LRM-PARSER-TASK-ENDTASK-SKIP
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-043
+- id: ST-OWNED-9-035
   phase: owned-lrm
   track: B
   title: 'OWNED: unique case (1''b1) one-hot identifier item guards'
@@ -4745,19 +4585,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-043.yaml
+  - contracts/ST-OWNED-9-035.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PARSER-UNIQUE-CASE-ONEHOT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PARSER-UNIQUE-CASE-ONEHOT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-043
+    registry_id: OWNED-9-035
     lrm_clause_id: LRM-PARSER-UNIQUE-CASE-ONEHOT
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-044
+- id: ST-OWNED-9-036
   phase: owned-lrm
   track: B
   title: 'OWNED: POST-B2 guarded always_ff NBA branch simulation from owned IR'
@@ -4765,19 +4605,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-044.yaml
+  - contracts/ST-OWNED-9-036.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-POST-B2-GUARDED-NBA-SIM to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-POST-B2-GUARDED-NBA-SIM; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-044
+    registry_id: OWNED-9-036
     lrm_clause_id: LRM-POST-B2-GUARDED-NBA-SIM
     lrm_section: 9.2.2
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-045
+- id: ST-OWNED-9-037
   phase: owned-lrm
   track: B
   title: 'OWNED: Multi-cycle sim on always_ff and case-guard feature blocks'
@@ -4785,19 +4625,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-045.yaml
+  - contracts/ST-OWNED-9-037.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-POST-SIM-FEATURE-BLOCKS to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-POST-SIM-FEATURE-BLOCKS; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-045
+    registry_id: OWNED-9-037
     lrm_clause_id: LRM-POST-SIM-FEATURE-BLOCKS
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-046
+- id: ST-OWNED-9-038
   phase: owned-lrm
   track: B
   title: 'OWNED: Multi-cycle owned IR sim on reference_cycle_block'
@@ -4805,19 +4645,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-046.yaml
+  - contracts/ST-OWNED-9-038.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-POST-SIM-REFERENCE-CYCLE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-POST-SIM-REFERENCE-CYCLE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-046
+    registry_id: OWNED-9-038
     lrm_clause_id: LRM-POST-SIM-REFERENCE-CYCLE
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-047
+- id: ST-OWNED-9-039
   phase: owned-lrm
   track: B
   title: 'OWNED: Procedural IR metadata bridges to sim scheduler'
@@ -4825,19 +4665,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-047.yaml
+  - contracts/ST-OWNED-9-039.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PROCEDURAL-IR-SIM-BRIDGE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PROCEDURAL-IR-SIM-BRIDGE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-047
+    registry_id: OWNED-9-039
     lrm_clause_id: LRM-PROCEDURAL-IR-SIM-BRIDGE
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-048
+- id: ST-OWNED-9-040
   phase: owned-lrm
   track: B
   title: 'OWNED: Procedural scheduling_region metadata (owned IR)'
@@ -4845,19 +4685,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-048.yaml
+  - contracts/ST-OWNED-9-040.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PROCEDURAL-SCHEDULING-REGIONS to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PROCEDURAL-SCHEDULING-REGIONS; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-048
+    registry_id: OWNED-9-040
     lrm_clause_id: LRM-PROCEDURAL-SCHEDULING-REGIONS
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-049
+- id: ST-OWNED-9-041
   phase: owned-lrm
   track: B
   title: 'OWNED: Procedural statement IR (nba_assign, continuous_assign)'
@@ -4865,19 +4705,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-049.yaml
+  - contracts/ST-OWNED-9-041.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PROCEDURAL-STATEMENT-IR to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PROCEDURAL-STATEMENT-IR; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-049
+    registry_id: OWNED-9-041
     lrm_clause_id: LRM-PROCEDURAL-STATEMENT-IR
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-050
+- id: ST-OWNED-9-042
   phase: owned-lrm
   track: B
   title: 'OWNED: program blocks (roadmap)'
@@ -4885,19 +4725,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-050.yaml
+  - contracts/ST-OWNED-9-042.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-PROGRAM-BLOCKS-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-PROGRAM-BLOCKS-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-050
+    registry_id: OWNED-9-042
     lrm_clause_id: LRM-PROGRAM-BLOCKS-UNSUPPORTED
     lrm_section: '9'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-051
+- id: ST-OWNED-9-043
   phase: owned-lrm
   track: B
   title: 'OWNED: repeat loop (roadmap)'
@@ -4905,19 +4745,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-051.yaml
+  - contracts/ST-OWNED-9-043.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-REPEAT-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-REPEAT-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-051
+    registry_id: OWNED-9-043
     lrm_clause_id: LRM-REPEAT-UNSUPPORTED
     lrm_section: '9.6'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-052
+- id: ST-OWNED-9-044
   phase: owned-lrm
   track: B
   title: 'OWNED: Reset smoke applies literal NBA when rst_n low'
@@ -4925,59 +4765,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-052.yaml
+  - contracts/ST-OWNED-9-044.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-RESET-SMOKE-LITERAL to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-RESET-SMOKE-LITERAL; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-052
+    registry_id: OWNED-9-044
     lrm_clause_id: LRM-RESET-SMOKE-LITERAL
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-053
+- id: ST-OWNED-9-045
   phase: owned-lrm
   track: B
   title: 'OWNED: Sim step order driven by procedural scheduling_region list'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-053.yaml
+  - contracts/ST-OWNED-9-045.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SCHEDULING-REGION-DRIVES-STEP to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SCHEDULING-REGION-DRIVES-STEP; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-053
+    registry_id: OWNED-9-045
     lrm_clause_id: LRM-SCHEDULING-REGION-DRIVES-STEP
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-054
+- id: ST-OWNED-9-046
   phase: owned-lrm
   track: B
   title: 'OWNED: always_comb owned parse and IR'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-054.yaml
+  - contracts/ST-OWNED-9-046.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-ALWAYS-COMB-OWNED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-ALWAYS-COMB-OWNED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-054
+    registry_id: OWNED-9-046
     lrm_clause_id: LRM-SIM-ALWAYS-COMB-OWNED
     lrm_section: '9.4'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-055
+- id: ST-OWNED-9-047
   phase: owned-lrm
   track: B
   title: 'OWNED: always_ff IR simulation depth'
@@ -4985,59 +4825,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-055.yaml
+  - contracts/ST-OWNED-9-047.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-ALWAYS-FF-DEPTH to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-ALWAYS-FF-DEPTH; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-055
+    registry_id: OWNED-9-047
     lrm_clause_id: LRM-SIM-ALWAYS-FF-DEPTH
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-056
+- id: ST-OWNED-9-048
   phase: owned-lrm
   track: B
   title: 'OWNED: Case mux with guarded arms and default fallback'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-056.yaml
+  - contracts/ST-OWNED-9-048.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-CASE-GUARDED-DEFAULT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-CASE-GUARDED-DEFAULT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-056
+    registry_id: OWNED-9-048
     lrm_clause_id: LRM-SIM-CASE-GUARDED-DEFAULT
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-057
+- id: ST-OWNED-9-049
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim case arm selection via sel port'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-057.yaml
+  - contracts/ST-OWNED-9-049.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-CASE-MUX to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-CASE-MUX; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-057
+    registry_id: OWNED-9-049
     lrm_clause_id: LRM-SIM-CASE-MUX
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-058
+- id: ST-OWNED-9-050
   phase: owned-lrm
   track: B
   title: 'OWNED: Sim JSON comb_from_statements observability'
@@ -5045,39 +4885,39 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-058.yaml
+  - contracts/ST-OWNED-9-050.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-COMB-FROM-STATEMENTS-FLAG to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-COMB-FROM-STATEMENTS-FLAG; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-058
+    registry_id: OWNED-9-050
     lrm_clause_id: LRM-SIM-COMB-FROM-STATEMENTS-FLAG
     lrm_section: 9.2.2
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-059
+- id: ST-OWNED-9-051
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim guarded continuous_assign selection'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-059.yaml
+  - contracts/ST-OWNED-9-051.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-COMB-GUARDED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-COMB-GUARDED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-059
+    registry_id: OWNED-9-051
     lrm_clause_id: LRM-SIM-COMB-GUARDED
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-060
+- id: ST-OWNED-9-052
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim evaluates continuous_assign statement RHS'
@@ -5085,59 +4925,59 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-060.yaml
+  - contracts/ST-OWNED-9-052.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-COMB-STATEMENT-RHS to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-COMB-STATEMENT-RHS; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-060
+    registry_id: OWNED-9-052
     lrm_clause_id: LRM-SIM-COMB-STATEMENT-RHS
     lrm_section: 9.2.2
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-061
+- id: ST-OWNED-9-053
   phase: owned-lrm
   track: B
   title: 'OWNED: Owned sim MVP expression eval (^, |, &, literals)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-061.yaml
+  - contracts/ST-OWNED-9-053.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-EXPR-EVAL-MVP to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-EXPR-EVAL-MVP; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-061
+    registry_id: OWNED-9-053
     lrm_clause_id: LRM-SIM-EXPR-EVAL-MVP
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-062
+- id: ST-OWNED-9-054
   phase: owned-lrm
   track: B
   title: 'OWNED: Simulator relative procedural lhs when hier_path_export relative'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-062.yaml
+  - contracts/ST-OWNED-9-054.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-HIER-RELATIVE-PROC to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-HIER-RELATIVE-PROC; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-062
+    registry_id: OWNED-9-054
     lrm_clause_id: LRM-SIM-HIER-RELATIVE-PROC
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-063
+- id: ST-OWNED-9-055
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim evaluates if_expr comb guard expressions'
@@ -5145,79 +4985,79 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-063.yaml
+  - contracts/ST-OWNED-9-055.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-IF-EXPR-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-IF-EXPR-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-063
+    registry_id: OWNED-9-055
     lrm_clause_id: LRM-SIM-IF-EXPR-GUARD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-064
+- id: ST-OWNED-9-056
   phase: owned-lrm
   track: B
   title: 'OWNED: sim_init signal overrides in design JSON'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-064.yaml
+  - contracts/ST-OWNED-9-056.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-INIT-OVERRIDE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-INIT-OVERRIDE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-064
+    registry_id: OWNED-9-056
     lrm_clause_id: LRM-SIM-INIT-OVERRIDE
     lrm_section: '9.4'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-065
+- id: ST-OWNED-9-057
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim literal nba_assign (1''b0) on async reset'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-065.yaml
+  - contracts/ST-OWNED-9-057.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-LITERAL-NBA to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-LITERAL-NBA; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-065
+    registry_id: OWNED-9-057
     lrm_clause_id: LRM-SIM-LITERAL-NBA
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-066
+- id: ST-OWNED-9-058
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim multi-cycle clock events'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-066.yaml
+  - contracts/ST-OWNED-9-058.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-MULTI-CYCLE-EVENTS to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-MULTI-CYCLE-EVENTS; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-066
+    registry_id: OWNED-9-058
     lrm_clause_id: LRM-SIM-MULTI-CYCLE-EVENTS
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-067
+- id: ST-OWNED-9-059
   phase: owned-lrm
   track: B
   title: 'OWNED: Multi-bit literal NBA values in sim'
@@ -5225,19 +5065,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-067.yaml
+  - contracts/ST-OWNED-9-059.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-MULTIBIT-LITERAL-NBA to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-MULTIBIT-LITERAL-NBA; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-067
+    registry_id: OWNED-9-059
     lrm_clause_id: LRM-SIM-MULTIBIT-LITERAL-NBA
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-068
+- id: ST-OWNED-9-060
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim if-guarded NBA branch selection per cycle'
@@ -5245,19 +5085,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-068.yaml
+  - contracts/ST-OWNED-9-060.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NBA-BRANCH-GUARDED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NBA-BRANCH-GUARDED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-068
+    registry_id: OWNED-9-060
     lrm_clause_id: LRM-SIM-NBA-BRANCH-GUARDED
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-069
+- id: ST-OWNED-9-061
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim NBA ordering smoke'
@@ -5265,19 +5105,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-069.yaml
+  - contracts/ST-OWNED-9-061.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NBA-ORDERING to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NBA-ORDERING; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-069
+    registry_id: OWNED-9-061
     lrm_clause_id: LRM-SIM-NBA-ORDERING
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-070
+- id: ST-OWNED-9-062
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim NBA edges from procedural statement IR'
@@ -5285,19 +5125,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-070.yaml
+  - contracts/ST-OWNED-9-062.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NBA-STATEMENT-EDGES to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NBA-STATEMENT-EDGES; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-070
+    registry_id: OWNED-9-062
     lrm_clause_id: LRM-SIM-NBA-STATEMENT-EDGES
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-071
+- id: ST-OWNED-9-063
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case default begin block with guarded if in sim mux'
@@ -5305,19 +5145,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-071.yaml
+  - contracts/ST-OWNED-9-063.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NESTED-DEFAULT-BEGIN to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NESTED-DEFAULT-BEGIN; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-071
+    registry_id: OWNED-9-063
     lrm_clause_id: LRM-SIM-NESTED-DEFAULT-BEGIN
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-072
+- id: ST-OWNED-9-064
   phase: owned-lrm
   track: B
   title: 'OWNED: Triple-nested case default begin if-else sim mux depth'
@@ -5325,19 +5165,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-072.yaml
+  - contracts/ST-OWNED-9-064.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NESTED-DEFAULT-BEGIN-DEPTH to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NESTED-DEFAULT-BEGIN-DEPTH; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-072
+    registry_id: OWNED-9-064
     lrm_clause_id: LRM-SIM-NESTED-DEFAULT-BEGIN-DEPTH
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-073
+- id: ST-OWNED-9-065
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case default begin block with if-else guarded arms'
@@ -5345,19 +5185,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-073.yaml
+  - contracts/ST-OWNED-9-065.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NESTED-DEFAULT-BEGIN-ELSE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NESTED-DEFAULT-BEGIN-ELSE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-073
+    registry_id: OWNED-9-065
     lrm_clause_id: LRM-SIM-NESTED-DEFAULT-BEGIN-ELSE
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-074
+- id: ST-OWNED-9-066
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case default with inner if guard in sim mux'
@@ -5365,19 +5205,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-074.yaml
+  - contracts/ST-OWNED-9-066.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NESTED-DEFAULT-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NESTED-DEFAULT-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-074
+    registry_id: OWNED-9-066
     lrm_clause_id: LRM-SIM-NESTED-DEFAULT-GUARD
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-075
+- id: ST-OWNED-9-067
   phase: owned-lrm
   track: B
   title: 'OWNED: Nested case default with if-else guarded arms in sim mux'
@@ -5385,19 +5225,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-075.yaml
+  - contracts/ST-OWNED-9-067.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-NESTED-DEFAULT-IF-ELSE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-NESTED-DEFAULT-IF-ELSE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-075
+    registry_id: OWNED-9-067
     lrm_clause_id: LRM-SIM-NESTED-DEFAULT-IF-ELSE
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-076
+- id: ST-OWNED-9-068
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim single | OR in if_expr comb guards'
@@ -5405,19 +5245,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-076.yaml
+  - contracts/ST-OWNED-9-068.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-OR-GUARD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-OR-GUARD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-076
+    registry_id: OWNED-9-068
     lrm_clause_id: LRM-SIM-OR-GUARD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-077
+- id: ST-OWNED-9-069
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim comb + clocked profile orchestration'
@@ -5425,19 +5265,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-077.yaml
+  - contracts/ST-OWNED-9-069.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-ORCHESTRATION-PROFILES to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-ORCHESTRATION-PROFILES; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-077
+    registry_id: OWNED-9-069
     lrm_clause_id: LRM-SIM-ORCHESTRATION-PROFILES
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-078
+- id: ST-OWNED-9-070
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim profile detection from scheduling_region metadata'
@@ -5445,19 +5285,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-078.yaml
+  - contracts/ST-OWNED-9-070.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-REGION-SCHEDULED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-REGION-SCHEDULED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-078
+    registry_id: OWNED-9-070
     lrm_clause_id: LRM-SIM-REGION-SCHEDULED
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-079
+- id: ST-OWNED-9-071
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim async reset deassert smoke'
@@ -5465,19 +5305,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-079.yaml
+  - contracts/ST-OWNED-9-071.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-RESET-DEASSERT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-RESET-DEASSERT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-079
+    registry_id: OWNED-9-071
     lrm_clause_id: LRM-SIM-RESET-DEASSERT
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-080
+- id: ST-OWNED-9-072
   phase: owned-lrm
   track: B
   title: 'OWNED: IR simulation smoke (tiny_counter)'
@@ -5485,19 +5325,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-080.yaml
+  - contracts/ST-OWNED-9-072.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-SMOKE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-SMOKE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-080
+    registry_id: OWNED-9-072
     lrm_clause_id: LRM-SIM-SMOKE
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-081
+- id: ST-OWNED-9-073
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim uses statement-derived NBA edges (roadmap)'
@@ -5505,19 +5345,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-081.yaml
+  - contracts/ST-OWNED-9-073.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-STATEMENT-AWARE to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-STATEMENT-AWARE; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-081
+    registry_id: OWNED-9-073
     lrm_clause_id: LRM-SIM-STATEMENT-AWARE
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-082
+- id: ST-OWNED-9-074
   phase: owned-lrm
   track: B
   title: 'OWNED: load_nba_edges prefers procedural nba_assign statements'
@@ -5525,19 +5365,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-082.yaml
+  - contracts/ST-OWNED-9-074.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-STATEMENT-NBA-LOAD to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-STATEMENT-NBA-LOAD; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-082
+    registry_id: OWNED-9-074
     lrm_clause_id: LRM-SIM-STATEMENT-NBA-LOAD
     lrm_section: 9.2.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-083
+- id: ST-OWNED-9-075
   phase: owned-lrm
   track: B
   title: 'OWNED: Triple-nested case sel3 default begin guarded arms'
@@ -5545,39 +5385,39 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-083.yaml
+  - contracts/ST-OWNED-9-075.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-TRIPLE-NESTED-SEL3 to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-TRIPLE-NESTED-SEL3; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-083
+    registry_id: OWNED-9-075
     lrm_clause_id: LRM-SIM-TRIPLE-NESTED-SEL3
     lrm_section: 9.4.1
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-084
+- id: ST-OWNED-9-076
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim unified comb+seq scheduling (one design)'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-084.yaml
+  - contracts/ST-OWNED-9-076.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-SIM-UNIFIED-SCHEDULER to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-SIM-UNIFIED-SCHEDULER; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-084
+    registry_id: OWNED-9-076
     lrm_clause_id: LRM-SIM-UNIFIED-SCHEDULER
     lrm_section: '9'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-085
+- id: ST-OWNED-9-077
   phase: owned-lrm
   track: B
   title: 'OWNED: Unified comb+ff sim with statement comb region'
@@ -5585,19 +5425,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-085.yaml
+  - contracts/ST-OWNED-9-077.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-UNIFIED-COMB-STATEMENT to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-UNIFIED-COMB-STATEMENT; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-085
+    registry_id: OWNED-9-077
     lrm_clause_id: LRM-UNIFIED-COMB-STATEMENT
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-086
+- id: ST-OWNED-9-078
   phase: owned-lrm
   track: B
   title: 'OWNED: Unified comb+ff guarded NBA on reset smoke'
@@ -5605,39 +5445,39 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-086.yaml
+  - contracts/ST-OWNED-9-078.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-UNIFIED-GUARDED-NBA to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-UNIFIED-GUARDED-NBA; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-086
+    registry_id: OWNED-9-078
     lrm_clause_id: LRM-UNIFIED-GUARDED-NBA
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-087
+- id: ST-OWNED-9-079
   phase: owned-lrm
   track: B
   title: 'OWNED: Unified comb+ff sim reports nba_from_statements'
-  status: deferred
+  status: pending
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-087.yaml
+  - contracts/ST-OWNED-9-079.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-UNIFIED-STATEMENT-NBA to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-UNIFIED-STATEMENT-NBA; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-087
+    registry_id: OWNED-9-079
     lrm_clause_id: LRM-UNIFIED-STATEMENT-NBA
     lrm_section: '9.2'
     pod: parser_always
     from_status: partial
     from_backend: owned
-- id: ST-OWNED-9-088
+- id: ST-OWNED-9-080
   phase: owned-lrm
   track: B
   title: 'OWNED: wait / wait_order (roadmap)'
@@ -5645,19 +5485,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-088.yaml
+  - contracts/ST-OWNED-9-080.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-WAIT-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-WAIT-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-088
+    registry_id: OWNED-9-080
     lrm_clause_id: LRM-WAIT-UNSUPPORTED
     lrm_section: '9.7'
     pod: parser_always
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-9-089
+- id: ST-OWNED-9-081
   phase: owned-lrm
   track: B
   title: 'OWNED: while / do-while loops (roadmap)'
@@ -5665,13 +5505,13 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
-  - contracts/ST-OWNED-9-089.yaml
+  - contracts/ST-OWNED-9-081.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-WHILE-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-WHILE-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-9-089
+    registry_id: OWNED-9-081
     lrm_clause_id: LRM-WHILE-UNSUPPORTED
     lrm_section: '9.6'
     pod: parser_always

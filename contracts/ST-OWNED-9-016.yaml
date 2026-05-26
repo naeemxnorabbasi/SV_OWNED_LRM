@@ -1,0 +1,17 @@
+schema_version: "1.0"
+st_id: ST-OWNED-9-016
+lrm_clause_id: LRM-EVENT-REGION-ORDER
+title: active region order comb before clocked
+status: completed
+
+owned_must:
+  - Owned backend satisfies clause with registered M5 evidence.
+
+tests:
+  m5_test_id: test_sv_m5_122_sim_region_scheduled_detect_owned_ir
+  feature_test_stem: comb_plus_ff
+
+promotion:
+  from_status: partial
+  to_status: supported
+  completed: true

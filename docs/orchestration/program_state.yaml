@@ -14,11 +14,11 @@ repos:
 metrics:
   lrm_index_source: ../SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
   lrm_index_total: 449
-  gap_clauses: 266
-  st_owned_clause_tasks: 266
+  gap_clauses: 258
+  st_owned_clause_tasks: 258
   st_chapter_gates: 26
   st_wave0_tasks: 7
-  backlog_total_subtasks: 299
+  backlog_total_subtasks: 291
 generator:
   script: scripts/generate_owned_backlog.py
   registry: docs/orchestration/OWNED_WAVE_REGISTRY.yaml
@@ -30,12 +30,12 @@ autopilot:
   picker_script: scripts/pick_next_owned_task.py
   driver_script: scripts/run_owned_autopilot.sh
   handoff: docs/orchestration/next_handoff.md
-  ticks_total: 129
+  ticks_total: 134
   tasks_completed: 7
-  tasks_deferred: 62
+  tasks_deferred: 67
   council_escalations: 0
   gate_fail_streak: 0
-  last_tick_at: '2026-05-26T15:34:08Z'
+  last_tick_at: '2026-05-26T15:43:03Z'
   last_gate: ok
   last_pick_ids: []
   last_pick_actions: []
@@ -45,11 +45,9 @@ parallel_dispatch:
   note: Increase to 3 when running parallel agents with disjoint FILE_OWNERSHIP pods
 last_completed_subtask: ST-OWNED-9-007
 last_completed_lrm_clause: LRM-ALWAYS-FF-STATEMENT-BODY
-metrics:
-  gap_clauses: 266
-last_product_commit: 6951397
+last_product_commit: 903e0a6
 next_orchestrator_actions:
-- 'ST-OWNED-9-089: defer_roadmap'
+- 'ST-OWNED-9-080: defer_roadmap'
 gates:
   autopilot: ../sv_frontend/scripts/run_autopilot_gate.sh
   oracle_farm: ../sv_frontend/scripts/run_oracle_farm.sh

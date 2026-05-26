@@ -1,6 +1,6 @@
 # Autopilot handoff
 
-**Generated:** 2026-05-26T15:34:08Z
+**Generated:** 2026-05-26T15:43:03Z
 **Autopilot level:** 3
 **Plan:** `docs/plans/2026-05-28-owned-lrm-full-autopilot.md`
 

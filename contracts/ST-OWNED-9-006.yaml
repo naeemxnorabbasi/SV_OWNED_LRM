@@ -1,0 +1,17 @@
+schema_version: "1.0"
+st_id: ST-OWNED-9-006
+lrm_clause_id: LRM-CASE-ARM-IF-EXPR-GUARD
+title: case arm if_expr guard
+status: completed
+
+owned_must:
+  - Owned backend satisfies clause with registered M5 evidence.
+
+tests:
+  m5_test_id: test_sv_m5_244_case_arm_if_expr_guard_owned
+  feature_test_stem: always_comb_case_arm_if_expr
+
+promotion:
+  from_status: partial
+  to_status: supported
+  completed: true

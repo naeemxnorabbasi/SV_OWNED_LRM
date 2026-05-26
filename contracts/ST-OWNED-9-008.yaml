@@ -1,7 +1,7 @@
 schema_version: "1.0"
-st_id: ST-OWNED-9-007
-lrm_clause_id: LRM-CASE-ENDCASE-PARSE
-title: case/endcase in always_comb
+st_id: ST-OWNED-9-008
+lrm_clause_id: LRM-CASE-LABEL-IR
+title: case_label metadata
 status: completed
 
 owned_must:
