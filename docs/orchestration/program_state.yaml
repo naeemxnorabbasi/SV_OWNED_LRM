@@ -30,35 +30,36 @@ autopilot:
   picker_script: scripts/pick_next_owned_task.py
   driver_script: scripts/run_owned_autopilot.sh
   handoff: docs/orchestration/next_handoff.md
-  ticks_total: 0
+  ticks_total: 47
   tasks_completed: 1
-  tasks_deferred: 0
+  tasks_deferred: 41
   council_escalations: 0
   gate_fail_streak: 0
-  last_tick_at: '2026-05-26T10:46:14Z'
+  last_tick_at: '2026-05-26T11:02:41Z'
   last_gate: ok
   last_pick_ids:
-  - ST-OWNED-11-001
+  - ST-OWNED-9-001
   last_pick_actions:
-  - defer_roadmap
+  - implement
   next_pick:
-    id: ST-OWNED-11-001
-    action: defer_roadmap
-    title: 'OWNED: foreach loop (roadmap)'
-    track: C
+    id: ST-OWNED-9-001
+    action: implement
+    title: 'OWNED: active_clocked region NBA after posedge'
+    track: B
     metadata:
-      registry_id: OWNED-11-001
-      lrm_clause_id: LRM-FOREACH-UNSUPPORTED
-      lrm_section: '11.9'
-      pod: lower
-      from_status: unsupported
+      registry_id: OWNED-9-001
+      lrm_clause_id: LRM-ACTIVE-CLOCKED-REGION-SIM
+      lrm_section: '9.3'
+      pod: parser_always
+      from_status: partial
       from_backend: owned
     deliverables:
-    - contracts/ST-OWNED-11-001.yaml
+    - contracts/ST-OWNED-9-001.yaml
     - 'sv_frontend: owned implementation'
-    - 'SV_UPF_SPEC: promote LRM-FOREACH-UNSUPPORTED to supported/owned'
-    verification: slang parity >=0.99; lrm_clause_id=LRM-FOREACH-UNSUPPORTED; run_autopilot_gate.sh
-    score: 9999
+    - 'SV_UPF_SPEC: promote LRM-ACTIVE-CLOCKED-REGION-SIM to supported/owned'
+    verification: slang parity >=0.99; lrm_clause_id=LRM-ACTIVE-CLOCKED-REGION-SIM; run_autopilot_gate.sh
+    score: 7459
+  chapter_gates_closed: 5
 parallel_dispatch:
   max: 1
   note: Increase to 3 when running parallel agents with disjoint FILE_OWNERSHIP pods
@@ -66,7 +67,7 @@ last_completed_lrm_clause: LRM-CASE-INSIDE
 last_completed_note: Promoted before registry renumber; no longer in gap backlog
 last_product_commit: 6951397
 next_orchestrator_actions:
-- 'ST-OWNED-11-001: defer_roadmap'
+- 'ST-OWNED-9-001: implement'
 gates:
   autopilot: ../sv_frontend/scripts/run_autopilot_gate.sh
   oracle_farm: ../sv_frontend/scripts/run_oracle_farm.sh

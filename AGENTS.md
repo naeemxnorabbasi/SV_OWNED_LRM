@@ -20,10 +20,10 @@ Deliver **100% IEEE 1800-2017** on the **owned C++** backend with commercial qua
 ## Pick work (autopilot)
 
 ```bash
-bash scripts/run_owned_autopilot.sh          # regenerate + pick + handoff + baseline gate
-python3 scripts/pick_next_owned_task.py      # print next task only
-python3 scripts/pick_next_owned_task.py --apply-defer ST-OWNED-11-001
-python3 scripts/pick_next_owned_task.py --apply-complete ST-OWNED-GATE-CH11
+bash scripts/run_owned_autopilot.sh              # tick + handoff + baseline gate
+bash scripts/run_owned_autopilot.sh --execute    # tick + auto defer/close_gate
+bash scripts/run_owned_autopilot.sh --auto 80    # loop until implement pick stops
+python3 scripts/pick_next_owned_task.py          # print next task only
 ```
 
 Manual backlog check:

@@ -1,5 +1,49 @@
-# Manual / autopilot status overrides (merged on generate + pick).
-# Regenerating phase_backlog_owned.yaml does not erase these rows.
 version: 1
-updated: 2026-05-28
-status_by_id: {}
+updated: '2026-05-26'
+status_by_id:
+  ST-OWNED-10-006: deferred
+  ST-OWNED-10-007: deferred
+  ST-OWNED-10-008: deferred
+  ST-OWNED-10-009: deferred
+  ST-OWNED-10-016: deferred
+  ST-OWNED-11-001: deferred
+  ST-OWNED-11-002: deferred
+  ST-OWNED-11-003: deferred
+  ST-OWNED-13-005: deferred
+  ST-OWNED-13-006: deferred
+  ST-OWNED-14-001: deferred
+  ST-OWNED-15-001: deferred
+  ST-OWNED-15-002: deferred
+  ST-OWNED-16-003: deferred
+  ST-OWNED-16-027: deferred
+  ST-OWNED-16-032: deferred
+  ST-OWNED-16-041: deferred
+  ST-OWNED-17-001: deferred
+  ST-OWNED-18-001: deferred
+  ST-OWNED-18-003: deferred
+  ST-OWNED-18-004: deferred
+  ST-OWNED-18-005: deferred
+  ST-OWNED-18-007: deferred
+  ST-OWNED-19-001: deferred
+  ST-OWNED-19-002: deferred
+  ST-OWNED-23-004: deferred
+  ST-OWNED-26-001: deferred
+  ST-OWNED-34-001: deferred
+  ST-OWNED-35-008: deferred
+  ST-OWNED-35-010: deferred
+  ST-OWNED-8-002: deferred
+  ST-OWNED-9-021: deferred
+  ST-OWNED-9-024: deferred
+  ST-OWNED-9-025: deferred
+  ST-OWNED-9-026: deferred
+  ST-OWNED-9-033: deferred
+  ST-OWNED-9-057: deferred
+  ST-OWNED-9-058: deferred
+  ST-OWNED-9-088: deferred
+  ST-OWNED-9-095: deferred
+  ST-OWNED-9-096: deferred
+  ST-OWNED-GATE-CH11: completed
+  ST-OWNED-GATE-CH14: completed
+  ST-OWNED-GATE-CH15: completed
+  ST-OWNED-GATE-CH17: completed
+  ST-OWNED-GATE-CH34: completed

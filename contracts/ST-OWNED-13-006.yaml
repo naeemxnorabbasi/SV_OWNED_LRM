@@ -1,7 +1,7 @@
 schema_version: "1.0"
-st_id: ST-OWNED-11-001
-lrm_clause_id: LRM-FOREACH-UNSUPPORTED
-title: OWNED: foreach loop (roadmap)
+st_id: ST-OWNED-13-006
+lrm_clause_id: LRM-UDP-UNSUPPORTED
+title: OWNED: User-defined primitives (roadmap)
 status: deferred
 reason: >-
   Roadmap-sized LRM surface; honest defer for owned-full-LRM program.

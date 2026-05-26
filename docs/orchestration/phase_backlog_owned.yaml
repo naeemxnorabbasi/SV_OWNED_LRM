@@ -81,7 +81,7 @@ subtasks:
   phase: owned-lrm
   track: orchestrator
   title: Chapter gate — Chapter 11 (3 clauses)
-  status: pending
+  status: completed
   depends_on:
   - ST-OWNED-GATE-W0
   verification: all ST-OWNED-11-* in chapter 11 completed
@@ -117,7 +117,7 @@ subtasks:
   phase: owned-lrm
   track: orchestrator
   title: Chapter gate — Chapter 14 (1 clauses)
-  status: pending
+  status: completed
   depends_on:
   - ST-OWNED-GATE-W0
   verification: all ST-OWNED-14-* in chapter 14 completed
@@ -129,7 +129,7 @@ subtasks:
   phase: owned-lrm
   track: orchestrator
   title: Chapter gate — Chapter 15 (2 clauses)
-  status: pending
+  status: completed
   depends_on:
   - ST-OWNED-GATE-W0
   verification: all ST-OWNED-15-* in chapter 15 completed
@@ -153,7 +153,7 @@ subtasks:
   phase: owned-lrm
   track: orchestrator
   title: Chapter gate — Chapter 17 (1 clauses)
-  status: pending
+  status: completed
   depends_on:
   - ST-OWNED-GATE-W0
   verification: all ST-OWNED-17-* in chapter 17 completed
@@ -273,7 +273,7 @@ subtasks:
   phase: owned-lrm
   track: orchestrator
   title: Chapter gate — Chapter 34 (1 clauses)
-  status: pending
+  status: completed
   depends_on:
   - ST-OWNED-GATE-W0
   verification: all ST-OWNED-34-* in chapter 34 completed
@@ -481,7 +481,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: deassign / release (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH10
   deliverables:
@@ -501,7 +501,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: force / release procedural (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH10
   deliverables:
@@ -521,7 +521,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: force / release procedural (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH10
   deliverables:
@@ -541,7 +541,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: Latch inference (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH10
   deliverables:
@@ -681,7 +681,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: supply0/supply1 net types (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH10
   deliverables:
@@ -741,7 +741,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: foreach loop (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH11
   deliverables:
@@ -761,7 +761,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: inside operator in constraints (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH11
   deliverables:
@@ -781,7 +781,7 @@ subtasks:
   phase: owned-lrm
   track: C
   title: 'OWNED: Streaming operators (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH11
   deliverables:
@@ -961,7 +961,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Task declarations (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH13
   deliverables:
@@ -981,7 +981,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: User-defined primitives (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH13
   deliverables:
@@ -1001,7 +1001,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Clocking blocks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH14
   deliverables:
@@ -1021,7 +1021,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Mailboxes (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH15
   deliverables:
@@ -1041,7 +1041,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Semaphores (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH15
   deliverables:
@@ -1101,7 +1101,7 @@ subtasks:
   phase: owned-lrm
   track: E
   title: 'OWNED: Immediate assert (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH16
   deliverables:
@@ -1581,7 +1581,7 @@ subtasks:
   phase: owned-lrm
   track: E
   title: 'OWNED: Immediate concurrent assertions (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH16
   deliverables:
@@ -1681,7 +1681,7 @@ subtasks:
   phase: owned-lrm
   track: E
   title: 'OWNED: Sequence match items beyond MVP (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH16
   deliverables:
@@ -1861,7 +1861,7 @@ subtasks:
   phase: owned-lrm
   track: E
   title: 'OWNED: Assertion control system tasks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH16
   deliverables:
@@ -1881,7 +1881,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Specify blocks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH17
   deliverables:
@@ -1901,7 +1901,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Constraint blocks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH18
   deliverables:
@@ -1941,7 +1941,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Randomize / randsequence (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH18
   deliverables:
@@ -1961,7 +1961,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: randcase (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH18
   deliverables:
@@ -1981,7 +1981,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: randomize() (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH18
   deliverables:
@@ -2021,7 +2021,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Constraint distribution operators (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH18
   deliverables:
@@ -2121,7 +2121,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Functional coverage (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH19
   deliverables:
@@ -2141,7 +2141,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Covergroups (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH19
   deliverables:
@@ -2361,7 +2361,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: defparam (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH23
   deliverables:
@@ -2941,7 +2941,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Configuration references (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH26
   deliverables:
@@ -3321,7 +3321,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: PLI / VPI system tasks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH34
   deliverables:
@@ -3481,7 +3481,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: UVM sequencer / sequence item (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH35
   deliverables:
@@ -3521,7 +3521,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: PLI/VPI (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH35
   deliverables:
@@ -3881,7 +3881,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Classes and OOP (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH8
   deliverables:
@@ -4301,7 +4301,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: disable procedural (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -4361,7 +4361,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Event trigger (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -4381,7 +4381,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: forever loop (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -4401,7 +4401,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: fork/join procedural (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -4541,7 +4541,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: Named blocks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -5021,7 +5021,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: program blocks (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -5041,7 +5041,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: repeat loop (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -5641,7 +5641,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: IR sim uses statement-derived NBA edges (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -5781,7 +5781,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: wait / wait_order (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
@@ -5801,7 +5801,7 @@ subtasks:
   phase: owned-lrm
   track: B
   title: 'OWNED: while / do-while loops (roadmap)'
-  status: pending
+  status: deferred
   depends_on:
   - ST-OWNED-GATE-CH9
   deliverables:
