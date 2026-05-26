@@ -4,10 +4,10 @@ generated_from: /home/naeemxnorabbasi/SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
 program: docs/plans/OWNED_FULL_LRM_PROGRAM.md
 summary:
   total_indexed: 449
-  gap_units: 274
+  gap_units: 273
   by_chapter:
     '10': 18
-    '11': 4
+    '11': 3
     '12': 4
     '13': 6
     '14': 1
@@ -33,8 +33,8 @@ summary:
     '9': 96
     misc: 1
   by_status:
-    supported: 197
-    partial: 203
+    supported: 198
+    partial: 202
     unsupported: 49
     delegated: 0
 units:
@@ -238,17 +238,6 @@ units:
   contract_template: schemas/clause_factory_contract.yaml
 - id: OWNED-11-001
   st_id: ST-OWNED-11-001
-  lrm_clause_id: LRM-CASE-INSIDE
-  lrm_section: '11.8'
-  title: case ... inside
-  support_status: partial
-  backend: owned
-  pod: lower
-  chapter: '11'
-  status: pending
-  contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-11-002
-  st_id: ST-OWNED-11-002
   lrm_clause_id: LRM-FOREACH-UNSUPPORTED
   lrm_section: '11.9'
   title: foreach loop (roadmap)
@@ -258,8 +247,8 @@ units:
   chapter: '11'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-11-003
-  st_id: ST-OWNED-11-003
+- id: OWNED-11-002
+  st_id: ST-OWNED-11-002
   lrm_clause_id: LRM-INSIDE-OPERATOR-UNSUPPORTED
   lrm_section: '11.8'
   title: inside operator in constraints (roadmap)
@@ -269,8 +258,8 @@ units:
   chapter: '11'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-11-004
-  st_id: ST-OWNED-11-004
+- id: OWNED-11-003
+  st_id: ST-OWNED-11-003
   lrm_clause_id: LRM-STREAMING-OPERATOR-UNSUPPORTED
   lrm_section: '11'
   title: Streaming operators (roadmap)

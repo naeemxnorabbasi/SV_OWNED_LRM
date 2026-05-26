@@ -17,11 +17,19 @@ Deliver **100% IEEE 1800-2017** on the **owned C++** backend with commercial qua
 3. `docs/orchestration/program_state.yaml`
 4. `docs/orchestration/phase_backlog_owned.yaml` (generated)
 
-## Pick work
+## Pick work (autopilot)
+
+```bash
+bash scripts/run_owned_autopilot.sh          # regenerate + pick + handoff + baseline gate
+python3 scripts/pick_next_owned_task.py      # print next task only
+python3 scripts/pick_next_owned_task.py --apply-defer ST-OWNED-11-001
+python3 scripts/pick_next_owned_task.py --apply-complete ST-OWNED-GATE-CH11
+```
+
+Manual backlog check:
 
 ```bash
 python3 scripts/generate_owned_backlog.py --check
-# Find ST-OWNED-* status: pending in phase_backlog_owned.yaml
 ```
 
 Claim a row → fill `contracts/<ST-OWNED-id>.yaml` from `schemas/clause_factory_contract.yaml` → implement in `sv_frontend` → PR to product + spec index.

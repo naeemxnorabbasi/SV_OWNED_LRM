@@ -1,0 +1,5 @@
+# Manual / autopilot status overrides (merged on generate + pick).
+# Regenerating phase_backlog_owned.yaml does not erase these rows.
+version: 1
+updated: 2026-05-28
+status_by_id: {}

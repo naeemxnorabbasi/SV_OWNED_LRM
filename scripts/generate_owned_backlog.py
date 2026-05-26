@@ -18,6 +18,7 @@ WORKSPACE = ROOT / "workspace.yaml"
 OUT_REGISTRY = ROOT / "docs" / "orchestration" / "OWNED_WAVE_REGISTRY.yaml"
 OUT_BACKLOG = ROOT / "docs" / "orchestration" / "phase_backlog_owned.yaml"
 OUT_SUMMARY = ROOT / "docs" / "orchestration" / "owned_gap_summary.yaml"
+OVERLAY = ROOT / "docs" / "orchestration" / "backlog_status_overlay.yaml"
 
 POD_BY_CHAPTER: dict[str, str] = {
     "4": "sema",
@@ -274,6 +275,19 @@ def write_registry(ws: dict, clauses: list[dict], units: list[dict], by_ch: dict
     OUT_SUMMARY.write_text(yaml.safe_dump(summary, sort_keys=True), encoding="utf-8")
 
 
+def load_status_overlay() -> dict[str, str]:
+    if not OVERLAY.is_file():
+        return {}
+    doc = yaml.safe_load(OVERLAY.read_text(encoding="utf-8")) or {}
+    return dict(doc.get("status_by_id") or {})
+
+
+def apply_status_overlay(subtasks: list[dict], overlay: dict[str, str]) -> None:
+    for row in subtasks:
+        if row["id"] in overlay:
+            row["status"] = overlay[row["id"]]
+
+
 def write_backlog(wave0: list[dict], gates: list[dict], clauses: list[dict]) -> None:
     header = {
         "version": 1,
@@ -285,6 +299,7 @@ def write_backlog(wave0: list[dict], gates: list[dict], clauses: list[dict]) -> 
         "do_not_edit_ids": True,
     }
     subtasks = wave0 + gates + clauses
+    apply_status_overlay(subtasks, load_status_overlay())
     doc = {**header, "subtasks": subtasks}
     OUT_BACKLOG.write_text(
         yaml.safe_dump(doc, sort_keys=False, allow_unicode=True, width=100),

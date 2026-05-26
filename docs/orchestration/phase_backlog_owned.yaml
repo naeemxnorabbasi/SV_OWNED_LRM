@@ -80,7 +80,7 @@ subtasks:
 - id: ST-OWNED-GATE-CH11
   phase: owned-lrm
   track: orchestrator
-  title: Chapter gate — Chapter 11 (4 clauses)
+  title: Chapter gate — Chapter 11 (3 clauses)
   status: pending
   depends_on:
   - ST-OWNED-GATE-W0
@@ -88,7 +88,7 @@ subtasks:
   agent: orchestrator
   metadata:
     chapter: '11'
-    clause_count: 4
+    clause_count: 3
 - id: ST-OWNED-GATE-CH12
   phase: owned-lrm
   track: orchestrator
@@ -740,44 +740,24 @@ subtasks:
 - id: ST-OWNED-11-001
   phase: owned-lrm
   track: C
-  title: 'OWNED: case ... inside'
+  title: 'OWNED: foreach loop (roadmap)'
   status: pending
   depends_on:
   - ST-OWNED-GATE-CH11
   deliverables:
   - contracts/ST-OWNED-11-001.yaml
   - 'sv_frontend: owned implementation'
-  - 'SV_UPF_SPEC: promote LRM-CASE-INSIDE to supported/owned'
-  verification: slang parity >=0.99; lrm_clause_id=LRM-CASE-INSIDE; run_autopilot_gate.sh
-  agent: generalPurpose
-  metadata:
-    registry_id: OWNED-11-001
-    lrm_clause_id: LRM-CASE-INSIDE
-    lrm_section: '11.8'
-    pod: lower
-    from_status: partial
-    from_backend: owned
-- id: ST-OWNED-11-002
-  phase: owned-lrm
-  track: C
-  title: 'OWNED: foreach loop (roadmap)'
-  status: pending
-  depends_on:
-  - ST-OWNED-GATE-CH11
-  deliverables:
-  - contracts/ST-OWNED-11-002.yaml
-  - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-FOREACH-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-FOREACH-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-11-002
+    registry_id: OWNED-11-001
     lrm_clause_id: LRM-FOREACH-UNSUPPORTED
     lrm_section: '11.9'
     pod: lower
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-11-003
+- id: ST-OWNED-11-002
   phase: owned-lrm
   track: C
   title: 'OWNED: inside operator in constraints (roadmap)'
@@ -785,19 +765,19 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH11
   deliverables:
-  - contracts/ST-OWNED-11-003.yaml
+  - contracts/ST-OWNED-11-002.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-INSIDE-OPERATOR-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-INSIDE-OPERATOR-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-11-003
+    registry_id: OWNED-11-002
     lrm_clause_id: LRM-INSIDE-OPERATOR-UNSUPPORTED
     lrm_section: '11.8'
     pod: lower
     from_status: unsupported
     from_backend: owned
-- id: ST-OWNED-11-004
+- id: ST-OWNED-11-003
   phase: owned-lrm
   track: C
   title: 'OWNED: Streaming operators (roadmap)'
@@ -805,13 +785,13 @@ subtasks:
   depends_on:
   - ST-OWNED-GATE-CH11
   deliverables:
-  - contracts/ST-OWNED-11-004.yaml
+  - contracts/ST-OWNED-11-003.yaml
   - 'sv_frontend: owned implementation'
   - 'SV_UPF_SPEC: promote LRM-STREAMING-OPERATOR-UNSUPPORTED to supported/owned'
   verification: slang parity >=0.99; lrm_clause_id=LRM-STREAMING-OPERATOR-UNSUPPORTED; run_autopilot_gate.sh
   agent: generalPurpose
   metadata:
-    registry_id: OWNED-11-004
+    registry_id: OWNED-11-003
     lrm_clause_id: LRM-STREAMING-OPERATOR-UNSUPPORTED
     lrm_section: '11'
     pod: lower

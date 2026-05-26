@@ -1,6 +1,6 @@
 by_chapter:
   '10': 18
-  '11': 4
+  '11': 3
   '12': 4
   '13': 6
   '14': 1
@@ -27,8 +27,8 @@ by_chapter:
   misc: 1
 by_status:
   delegated: 0
-  partial: 203
-  supported: 197
+  partial: 202
+  supported: 198
   unsupported: 49
-gap_units: 274
+gap_units: 273
 total_indexed: 449

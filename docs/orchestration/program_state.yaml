@@ -1,40 +1,74 @@
 version: 1
 program: owned-full-lrm
 workspace: SV_OWNED_LRM
-updated: 2026-05-28
+updated: '2026-05-26'
 active_phase: owned-lrm-wave1-active
-
-north_star: "100% IEEE 1800-2017 owned C++ — v4.0-owned-lrm-cert"
+north_star: 100% IEEE 1800-2017 owned C++ — v4.0-owned-lrm-cert
 legacy_program: ../SV_UPF_SPEC
 legacy_untouched: true
-
 repos:
   spec: ../SV_UPF_SPEC
   product: ../sv_frontend
   eval: ../sv_frontend_eval
-
+  remote: https://github.com/naeemxnorabbasi/SV_OWNED_LRM
 metrics:
   lrm_index_source: ../SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
   lrm_index_total: 449
-  gap_clauses: 274
-  st_owned_clause_tasks: 274
+  gap_clauses: 273
+  st_owned_clause_tasks: 273
   st_chapter_gates: 26
   st_wave0_tasks: 7
-  backlog_total_subtasks: 307
-
+  backlog_total_subtasks: 306
 generator:
   script: scripts/generate_owned_backlog.py
   registry: docs/orchestration/OWNED_WAVE_REGISTRY.yaml
   backlog: docs/orchestration/phase_backlog_owned.yaml
-
-last_completed_subtask: ST-OWNED-11-001
-last_product_commit: pending-push
+  status_overlay: docs/orchestration/backlog_status_overlay.yaml
+autopilot:
+  level: 3
+  plan: docs/plans/2026-05-28-owned-lrm-full-autopilot.md
+  picker_script: scripts/pick_next_owned_task.py
+  driver_script: scripts/run_owned_autopilot.sh
+  handoff: docs/orchestration/next_handoff.md
+  ticks_total: 0
+  tasks_completed: 1
+  tasks_deferred: 0
+  council_escalations: 0
+  gate_fail_streak: 0
+  last_tick_at: '2026-05-26T10:46:14Z'
+  last_gate: ok
+  last_pick_ids:
+  - ST-OWNED-11-001
+  last_pick_actions:
+  - defer_roadmap
+  next_pick:
+    id: ST-OWNED-11-001
+    action: defer_roadmap
+    title: 'OWNED: foreach loop (roadmap)'
+    track: C
+    metadata:
+      registry_id: OWNED-11-001
+      lrm_clause_id: LRM-FOREACH-UNSUPPORTED
+      lrm_section: '11.9'
+      pod: lower
+      from_status: unsupported
+      from_backend: owned
+    deliverables:
+    - contracts/ST-OWNED-11-001.yaml
+    - 'sv_frontend: owned implementation'
+    - 'SV_UPF_SPEC: promote LRM-FOREACH-UNSUPPORTED to supported/owned'
+    verification: slang parity >=0.99; lrm_clause_id=LRM-FOREACH-UNSUPPORTED; run_autopilot_gate.sh
+    score: 9999
+parallel_dispatch:
+  max: 1
+  note: Increase to 3 when running parallel agents with disjoint FILE_OWNERSHIP pods
+last_completed_lrm_clause: LRM-CASE-INSIDE
+last_completed_note: Promoted before registry renumber; no longer in gap backlog
+last_product_commit: 6951397
 next_orchestrator_actions:
-  - "ST-OWNED-11-002..004: honest deferred (foreach/constraint inside/streaming roadmap)"
-  - "ST-OWNED-GATE-CH11: close after roadmap items documented"
-  - "Begin ST-OWNED-9-* chapter 9 procedural tranche (largest gap)"
-
+- 'ST-OWNED-11-001: defer_roadmap'
 gates:
   autopilot: ../sv_frontend/scripts/run_autopilot_gate.sh
   oracle_farm: ../sv_frontend/scripts/run_oracle_farm.sh
   workspace_check: scripts/check_workspace.py
+  implementation_loop: scripts/run_implementation_loop.sh
