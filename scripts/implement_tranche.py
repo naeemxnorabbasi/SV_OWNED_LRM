@@ -36,6 +36,34 @@ TRANCHES: dict[str, TrancheSpec] = {
         "9.4",
         "OWNED-CH9-002",
     ),
+    "ST-OWNED-9-003": (
+        "test_sv_m5_312_owned_always_comb_procedural_metadata",
+        "LRM-ALWAYS-COMB",
+        "test_sv_m5_312_owned_always_comb_procedural_metadata",
+        "9.2",
+        "OWNED-CH9-003",
+    ),
+    "ST-OWNED-9-004": (
+        "test_sv_m5_109_sim_always_comb_from_owned_ir",
+        "LRM-ALWAYS-COMB-STATEMENT-SIM",
+        "test_sv_m5_109_sim_always_comb_from_owned_ir",
+        "9.2.2",
+        "OWNED-CH9-004",
+    ),
+    "ST-OWNED-9-005": (
+        "test_sv_m5_313_owned_always_ff_owned",
+        "LRM-ALWAYS-FF",
+        "test_sv_m5_313_owned_always_ff_owned",
+        "9.4",
+        "OWNED-CH9-005",
+    ),
+    "ST-OWNED-9-007": (
+        "test_sv_m5_129_sim_nba_edges_from_statement_ir",
+        "LRM-ALWAYS-FF-STATEMENT-BODY",
+        "test_sv_m5_129_sim_nba_edges_from_statement_ir",
+        "9.2",
+        "OWNED-CH9-007",
+    ),
 }
 
 
@@ -142,6 +170,10 @@ promotion:
 CONTRACT_META: dict[str, tuple[str, str]] = {
     "ST-OWNED-9-001": ("active_clocked region NBA after posedge", "comb_plus_ff"),
     "ST-OWNED-9-002": ("always_comb", "always_comb"),
+    "ST-OWNED-9-003": ("always_comb procedural metadata", "always_comb"),
+    "ST-OWNED-9-004": ("always_comb XOR sim statement-backed comb", "always_comb"),
+    "ST-OWNED-9-005": ("always_ff", "always_ff"),
+    "ST-OWNED-9-007": ("always_ff body NBA statements", "always_ff"),
 }
 
 

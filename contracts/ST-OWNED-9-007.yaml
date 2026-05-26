@@ -1,0 +1,18 @@
+schema_version: "1.0"
+st_id: ST-OWNED-9-007
+lrm_clause_id: LRM-ALWAYS-FF-STATEMENT-BODY
+title: always_ff body NBA statements
+status: completed
+
+owned_must:
+  - Owned C++ parses always_comb and exports AlwaysComb procedural IR.
+  - scheduling_region active_comb with continuous_assign statement bodies.
+
+tests:
+  m5_test_id: test_sv_m5_129_sim_nba_edges_from_statement_ir
+  feature_test_stem: always_ff
+
+promotion:
+  from_status: partial
+  to_status: supported
+  completed: true

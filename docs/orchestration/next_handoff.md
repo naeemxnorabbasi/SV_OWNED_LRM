@@ -1,35 +1,12 @@
 # Autopilot handoff
 
-**Generated:** 2026-05-26T11:09:10Z
+**Generated:** 2026-05-26T15:34:08Z
 **Autopilot level:** 3
 **Plan:** `docs/plans/2026-05-28-owned-lrm-full-autopilot.md`
 
-## Task 1: `ST-OWNED-9-002`
+## Status
 
-- **Action:** `implement`
-- **Title:** OWNED: always_comb
-- **Track:** B
-- **LRM clause:** `LRM-ALWAYS-COMB`
-- **Pod:** `parser_always`
-- **Score:** 7448
-
-### Deliverables
-
-- contracts/ST-OWNED-9-002.yaml
-- sv_frontend: owned implementation
-- SV_UPF_SPEC: promote LRM-ALWAYS-COMB to supported/owned
-
-### Verification
-
-- slang parity >=0.99; lrm_clause_id=LRM-ALWAYS-COMB; run_autopilot_gate.sh
-
-### Agent steps
-
-1. Copy `schemas/clause_factory_contract.yaml` → `contracts/<ST-ID>.yaml` and fill.
-2. Implement only in pod paths from `FILE_OWNERSHIP.yaml`.
-3. Add feature test stem + M5 test in `sv_frontend`.
-4. Promote `lrm_clause_index.yaml` + matrix; run gates.
-5. Commit all three repos with footer `Owned-Tranche: <ST-ID>`.
+No eligible tasks. Regenerate backlog or update overlay / index promotions.
 
 ## Gates (after implement)
 

@@ -1,0 +1,11 @@
+schema_version: "1.0"
+st_id: ST-OWNED-9-084
+lrm_clause_id: LRM-SIM-STATEMENT-AWARE
+title: OWNED: IR sim uses statement-derived NBA edges (roadmap)
+status: deferred
+reason: >-
+  Roadmap-sized LRM surface; honest defer for owned-full-LRM program.
+  Do not promote to supported until dedicated tranche.
+promotion:
+  to_status: unsupported
+  blocked: true

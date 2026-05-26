@@ -30,45 +30,26 @@ autopilot:
   picker_script: scripts/pick_next_owned_task.py
   driver_script: scripts/run_owned_autopilot.sh
   handoff: docs/orchestration/next_handoff.md
-  ticks_total: 114
+  ticks_total: 129
   tasks_completed: 1
-  tasks_deferred: 47
+  tasks_deferred: 62
   council_escalations: 0
   gate_fail_streak: 0
-  last_tick_at: '2026-05-26T11:09:10Z'
+  last_tick_at: '2026-05-26T15:34:08Z'
   last_gate: ok
-  last_pick_ids:
-  - ST-OWNED-9-002
-  last_pick_actions:
-  - implement
-  next_pick:
-    id: ST-OWNED-9-002
-    action: implement
-    title: 'OWNED: always_comb'
-    track: B
-    metadata:
-      registry_id: OWNED-9-002
-      lrm_clause_id: LRM-ALWAYS-COMB
-      lrm_section: '9.4'
-      pod: parser_always
-      from_status: partial
-      from_backend: slang
-    deliverables:
-    - contracts/ST-OWNED-9-002.yaml
-    - 'sv_frontend: owned implementation'
-    - 'SV_UPF_SPEC: promote LRM-ALWAYS-COMB to supported/owned'
-    verification: slang parity >=0.99; lrm_clause_id=LRM-ALWAYS-COMB; run_autopilot_gate.sh
-    score: 7448
+  last_pick_ids: []
+  last_pick_actions: []
   chapter_gates_closed: 5
 parallel_dispatch:
   max: 1
   note: Increase to 3 when running parallel agents with disjoint FILE_OWNERSHIP pods
-last_completed_subtask: ST-OWNED-9-002
-last_completed_lrm_clause: LRM-ALWAYS-COMB
-last_product_commit: 6951397
+last_completed_subtask: ST-OWNED-9-007
+last_completed_lrm_clause: LRM-ALWAYS-FF-STATEMENT-BODY
+metrics:
+  gap_clauses: 266
 last_product_commit: 6951397
 next_orchestrator_actions:
-- 'ST-OWNED-9-002: implement'
+- 'ST-OWNED-9-089: defer_roadmap'
 gates:
   autopilot: ../sv_frontend/scripts/run_autopilot_gate.sh
   oracle_farm: ../sv_frontend/scripts/run_oracle_farm.sh
