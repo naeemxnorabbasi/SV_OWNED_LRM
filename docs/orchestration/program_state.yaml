@@ -2,7 +2,7 @@ version: 1
 program: owned-full-lrm
 workspace: SV_OWNED_LRM
 updated: 2026-05-28
-active_phase: owned-lrm-wave0-complete
+active_phase: owned-lrm-wave1-active
 
 north_star: "100% IEEE 1800-2017 owned C++ — v4.0-owned-lrm-cert"
 legacy_program: ../SV_UPF_SPEC
@@ -27,11 +27,12 @@ generator:
   registry: docs/orchestration/OWNED_WAVE_REGISTRY.yaml
   backlog: docs/orchestration/phase_backlog_owned.yaml
 
-last_completed_subtask: ST-W0-06
+last_completed_subtask: ST-OWNED-11-001
+last_product_commit: pending-push
 next_orchestrator_actions:
-  - "Run: python3 scripts/generate_owned_backlog.py"
-  - "Dispatch ST-OWNED-* from phase_backlog_owned.yaml (chapter 9 highest count)"
-  - "Promote clauses back to SV_UPF_SPEC index when gates pass"
+  - "ST-OWNED-11-002..004: honest deferred (foreach/constraint inside/streaming roadmap)"
+  - "ST-OWNED-GATE-CH11: close after roadmap items documented"
+  - "Begin ST-OWNED-9-* chapter 9 procedural tranche (largest gap)"
 
 gates:
   autopilot: ../sv_frontend/scripts/run_autopilot_gate.sh

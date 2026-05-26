@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 contracts/*.yaml
 !contracts/.gitkeep
+!contracts/ST-OWNED-*.yaml
