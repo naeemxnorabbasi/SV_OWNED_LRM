@@ -22,7 +22,8 @@ Deliver **100% IEEE 1800-2017** on the **owned C++** backend with commercial qua
 ```bash
 bash scripts/run_owned_autopilot.sh              # tick + handoff + baseline gate
 bash scripts/run_owned_autopilot.sh --execute    # tick + auto defer/close_gate
-bash scripts/run_owned_autopilot.sh --auto 80    # loop until implement pick stops
+bash scripts/run_owned_autopilot.sh --auto 80    # loop: defer/gates + registered implement tranches
+python3 scripts/implement_tranche.py ST-OWNED-9-001  # register tranche in implement_tranche.py first
 python3 scripts/pick_next_owned_task.py          # print next task only
 ```
 

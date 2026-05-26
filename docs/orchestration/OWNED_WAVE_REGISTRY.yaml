@@ -4,7 +4,7 @@ generated_from: /home/naeemxnorabbasi/SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
 program: docs/plans/OWNED_FULL_LRM_PROGRAM.md
 summary:
   total_indexed: 449
-  gap_units: 273
+  gap_units: 272
   by_chapter:
     '10': 18
     '11': 3
@@ -30,11 +30,11 @@ summary:
     '6': 8
     '7': 3
     '8': 2
-    '9': 96
+    '9': 95
     misc: 1
   by_status:
-    supported: 198
-    partial: 202
+    supported: 199
+    partial: 201
     unsupported: 49
     delegated: 0
 units:
@@ -1976,17 +1976,6 @@ units:
   contract_template: schemas/clause_factory_contract.yaml
 - id: OWNED-9-001
   st_id: ST-OWNED-9-001
-  lrm_clause_id: LRM-ACTIVE-CLOCKED-REGION-SIM
-  lrm_section: '9.3'
-  title: active_clocked region NBA after posedge
-  support_status: partial
-  backend: owned
-  pod: parser_always
-  chapter: '9'
-  status: pending
-  contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-002
-  st_id: ST-OWNED-9-002
   lrm_clause_id: LRM-ACTIVE-COMB-REGION-SIM
   lrm_section: '9'
   title: active_comb region evaluation in unified cycle
@@ -1996,8 +1985,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-003
-  st_id: ST-OWNED-9-003
+- id: OWNED-9-002
+  st_id: ST-OWNED-9-002
   lrm_clause_id: LRM-ALWAYS-COMB
   lrm_section: '9.4'
   title: always_comb
@@ -2007,8 +1996,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-004
-  st_id: ST-OWNED-9-004
+- id: OWNED-9-003
+  st_id: ST-OWNED-9-003
   lrm_clause_id: LRM-ALWAYS-COMB
   lrm_section: '9.2'
   title: always_comb procedural metadata
@@ -2018,8 +2007,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-005
-  st_id: ST-OWNED-9-005
+- id: OWNED-9-004
+  st_id: ST-OWNED-9-004
   lrm_clause_id: LRM-ALWAYS-COMB-BARE-ASSIGN
   lrm_section: 9.2.2
   title: Bare always_comb blocking assign body parsing
@@ -2029,8 +2018,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-006
-  st_id: ST-OWNED-9-006
+- id: OWNED-9-005
+  st_id: ST-OWNED-9-005
   lrm_clause_id: LRM-ALWAYS-COMB-CASE-CORPUS
   lrm_section: 9.4.1
   title: always_comb_case_mux feature corpus
@@ -2040,8 +2029,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-007
-  st_id: ST-OWNED-9-007
+- id: OWNED-9-006
+  st_id: ST-OWNED-9-006
   lrm_clause_id: LRM-ALWAYS-COMB-CONCAT-CORPUS
   lrm_section: 9.2.2
   title: always_comb_concat feature corpus
@@ -2051,8 +2040,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-008
-  st_id: ST-OWNED-9-008
+- id: OWNED-9-007
+  st_id: ST-OWNED-9-007
   lrm_clause_id: LRM-ALWAYS-COMB-STATEMENT-SIM
   lrm_section: 9.2.2
   title: always_comb XOR sim with statement-backed comb region
@@ -2062,8 +2051,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-009
-  st_id: ST-OWNED-9-009
+- id: OWNED-9-008
+  st_id: ST-OWNED-9-008
   lrm_clause_id: LRM-ALWAYS-FF
   lrm_section: '9.4'
   title: always_ff
@@ -2073,8 +2062,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-010
-  st_id: ST-OWNED-9-010
+- id: OWNED-9-009
+  st_id: ST-OWNED-9-009
   lrm_clause_id: LRM-ALWAYS-FF-IF-BEGIN-CORPUS
   lrm_section: 9.2.1
   title: always_ff_if_begin feature corpus
@@ -2084,8 +2073,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-011
-  st_id: ST-OWNED-9-011
+- id: OWNED-9-010
+  st_id: ST-OWNED-9-010
   lrm_clause_id: LRM-ALWAYS-FF-STATEMENT-BODY
   lrm_section: '9.2'
   title: always_ff body NBA statements exported
@@ -2095,8 +2084,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-012
-  st_id: ST-OWNED-9-012
+- id: OWNED-9-011
+  st_id: ST-OWNED-9-011
   lrm_clause_id: LRM-BLOCKING-ASSIGN-PROC
   lrm_section: '9.2'
   title: Blocking assignments in procedural blocks
@@ -2106,8 +2095,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-013
-  st_id: ST-OWNED-9-013
+- id: OWNED-9-012
+  st_id: ST-OWNED-9-012
   lrm_clause_id: LRM-CASE-ARM-IF-EXPR-GUARD
   lrm_section: 9.4.1
   title: Case mux arm if (en && valid) if_expr guard export and sim
@@ -2117,8 +2106,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-014
-  st_id: ST-OWNED-9-014
+- id: OWNED-9-013
+  st_id: ST-OWNED-9-013
   lrm_clause_id: LRM-CASE-ENDCASE-PARSE
   lrm_section: 9.4.1
   title: case/endcase in procedural always_comb bodies
@@ -2128,8 +2117,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-015
-  st_id: ST-OWNED-9-015
+- id: OWNED-9-014
+  st_id: ST-OWNED-9-014
   lrm_clause_id: LRM-CASE-LABEL-IR
   lrm_section: 9.4.1
   title: case_label metadata on procedural statements
@@ -2139,8 +2128,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-016
-  st_id: ST-OWNED-9-016
+- id: OWNED-9-015
+  st_id: ST-OWNED-9-015
   lrm_clause_id: LRM-CASE-LABEL-PATH
   lrm_section: 9.4.1
   title: Hierarchical case_label paths with pipe separator
@@ -2150,8 +2139,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-017
-  st_id: ST-OWNED-9-017
+- id: OWNED-9-016
+  st_id: ST-OWNED-9-016
   lrm_clause_id: LRM-CASE-REGION-INDEX
   lrm_section: '9'
   title: Case procedural region indexed
@@ -2161,8 +2150,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-018
-  st_id: ST-OWNED-9-018
+- id: OWNED-9-017
+  st_id: ST-OWNED-9-017
   lrm_clause_id: LRM-COMB-IF-GUARD-IR
   lrm_section: 9.2.1
   title: Combinational if_pos/if_neg guard metadata
@@ -2172,8 +2161,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-019
-  st_id: ST-OWNED-9-019
+- id: OWNED-9-018
+  st_id: ST-OWNED-9-018
   lrm_clause_id: LRM-COMB-PLUS-FF-RTL
   lrm_section: '9.2'
   title: comb_plus_ff eval corpus (always_comb + always_ff)
@@ -2183,8 +2172,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-020
-  st_id: ST-OWNED-9-020
+- id: OWNED-9-019
+  st_id: ST-OWNED-9-019
   lrm_clause_id: LRM-DELAY-CONTROL-UNSUPPORTED
   lrm_section: '9.7'
   title: Delay control
@@ -2194,8 +2183,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-021
-  st_id: ST-OWNED-9-021
+- id: OWNED-9-020
+  st_id: ST-OWNED-9-020
   lrm_clause_id: LRM-DISABLE-PROC-UNSUPPORTED
   lrm_section: '9.6'
   title: disable procedural (roadmap)
@@ -2205,8 +2194,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-022
-  st_id: ST-OWNED-9-022
+- id: OWNED-9-021
+  st_id: ST-OWNED-9-021
   lrm_clause_id: LRM-ELSE-IF-CHAIN
   lrm_section: 9.2.1
   title: else if chain parsing in always bodies
@@ -2216,8 +2205,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-023
-  st_id: ST-OWNED-9-023
+- id: OWNED-9-022
+  st_id: ST-OWNED-9-022
   lrm_clause_id: LRM-EVENT-REGION-ORDER
   lrm_section: '9'
   title: Active region order — comb before clocked NBA
@@ -2227,8 +2216,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-024
-  st_id: ST-OWNED-9-024
+- id: OWNED-9-023
+  st_id: ST-OWNED-9-023
   lrm_clause_id: LRM-EVENT-TRIGGER-UNSUPPORTED
   lrm_section: '9.7'
   title: Event trigger (roadmap)
@@ -2238,8 +2227,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-025
-  st_id: ST-OWNED-9-025
+- id: OWNED-9-024
+  st_id: ST-OWNED-9-024
   lrm_clause_id: LRM-FOREVER-UNSUPPORTED
   lrm_section: '9.6'
   title: forever loop (roadmap)
@@ -2249,8 +2238,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-026
-  st_id: ST-OWNED-9-026
+- id: OWNED-9-025
+  st_id: ST-OWNED-9-025
   lrm_clause_id: LRM-FORK-JOIN-UNSUPPORTED
   lrm_section: '9.6'
   title: fork/join procedural (roadmap)
@@ -2260,8 +2249,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-027
-  st_id: ST-OWNED-9-027
+- id: OWNED-9-026
+  st_id: ST-OWNED-9-026
   lrm_clause_id: LRM-GENERIC-IF-GUARD
   lrm_section: 9.2.1
   title: Generic identifier if_pos/if_neg comb guards
@@ -2271,8 +2260,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-028
-  st_id: ST-OWNED-9-028
+- id: OWNED-9-027
+  st_id: ST-OWNED-9-027
   lrm_clause_id: LRM-IF-BEGIN-END-GUARD
   lrm_section: 9.2.1
   title: if/else begin/end NBA guard propagation
@@ -2282,8 +2271,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-029
-  st_id: ST-OWNED-9-029
+- id: OWNED-9-028
+  st_id: ST-OWNED-9-028
   lrm_clause_id: LRM-IF-CONCAT-GUARD
   lrm_section: 9.2.1
   title: Concat/replication conditions in if_expr comb guards
@@ -2293,8 +2282,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-030
-  st_id: ST-OWNED-9-030
+- id: OWNED-9-029
+  st_id: ST-OWNED-9-029
   lrm_clause_id: LRM-IF-EXPR-GUARD
   lrm_section: 9.2.1
   title: always_comb if_expr guards for &&, ||, and ==
@@ -2304,8 +2293,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-031
-  st_id: ST-OWNED-9-031
+- id: OWNED-9-030
+  st_id: ST-OWNED-9-030
   lrm_clause_id: LRM-INITIAL-BLOCK
   lrm_section: '9.3'
   title: initial procedural block
@@ -2315,8 +2304,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-032
-  st_id: ST-OWNED-9-032
+- id: OWNED-9-031
+  st_id: ST-OWNED-9-031
   lrm_clause_id: LRM-INITIAL-REGION-SUPPORTED
   lrm_section: '9.2'
   title: Initial procedural region — supported subset
@@ -2326,8 +2315,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-033
-  st_id: ST-OWNED-9-033
+- id: OWNED-9-032
+  st_id: ST-OWNED-9-032
   lrm_clause_id: LRM-NAMED-BLOCK-UNSUPPORTED
   lrm_section: '9.3'
   title: Named blocks (roadmap)
@@ -2337,8 +2326,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-034
-  st_id: ST-OWNED-9-034
+- id: OWNED-9-033
+  st_id: ST-OWNED-9-033
   lrm_clause_id: LRM-NBA-ACTIVE-REGION
   lrm_section: '9.3'
   title: NBA update region after posedge clk
@@ -2348,8 +2337,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-035
-  st_id: ST-OWNED-9-035
+- id: OWNED-9-034
+  st_id: ST-OWNED-9-034
   lrm_clause_id: LRM-NBA-ASSIGN-STATEMENT
   lrm_section: '9.2'
   title: NBA assign statements in always_ff IR
@@ -2359,8 +2348,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-036
-  st_id: ST-OWNED-9-036
+- id: OWNED-9-035
+  st_id: ST-OWNED-9-035
   lrm_clause_id: LRM-NBA-IF-GUARD-EXPORT
   lrm_section: 9.2.1
   title: if/else NBA guard export (reset_active / reset_inactive)
@@ -2370,8 +2359,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-037
-  st_id: ST-OWNED-9-037
+- id: OWNED-9-036
+  st_id: ST-OWNED-9-036
   lrm_clause_id: LRM-NBA-LITERAL-EXPORT
   lrm_section: 9.2.1
   title: Procedural nba_assign literal RHS in statement IR
@@ -2381,8 +2370,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-038
-  st_id: ST-OWNED-9-038
+- id: OWNED-9-037
+  st_id: ST-OWNED-9-037
   lrm_clause_id: LRM-NESTED-CASE-BEGIN
   lrm_section: 9.4.1
   title: Nested case in begin/end with sel2 selector
@@ -2392,8 +2381,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-039
-  st_id: ST-OWNED-9-039
+- id: OWNED-9-038
+  st_id: ST-OWNED-9-038
   lrm_clause_id: LRM-NESTED-CASE-DEFAULT
   lrm_section: 9.4.1
   title: Nested case inner default priority over outer default
@@ -2403,8 +2392,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-040
-  st_id: ST-OWNED-9-040
+- id: OWNED-9-039
+  st_id: ST-OWNED-9-039
   lrm_clause_id: LRM-NESTED-CASE-SIM
   lrm_section: 9.4.1
   title: Nested case pipe labels and sim mux (sel/sel2)
@@ -2414,8 +2403,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-041
-  st_id: ST-OWNED-9-041
+- id: OWNED-9-040
+  st_id: ST-OWNED-9-040
   lrm_clause_id: LRM-NESTED-IF-ALWAYS-COMB
   lrm_section: 9.2.1
   title: Nested if/else in always_comb begin blocks
@@ -2425,8 +2414,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-042
-  st_id: ST-OWNED-9-042
+- id: OWNED-9-041
+  st_id: ST-OWNED-9-041
   lrm_clause_id: LRM-NONBLOCKING-ASSIGN-PROC
   lrm_section: '9.2'
   title: Nonblocking assignments (NBA)
@@ -2436,8 +2425,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-043
-  st_id: ST-OWNED-9-043
+- id: OWNED-9-042
+  st_id: ST-OWNED-9-042
   lrm_clause_id: LRM-ONEHOT-CASE-BEGIN-GUARD
   lrm_section: 9.4.1
   title: One-hot case item begin blocks with chained if_expr guards
@@ -2447,8 +2436,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-044
-  st_id: ST-OWNED-9-044
+- id: OWNED-9-043
+  st_id: ST-OWNED-9-043
   lrm_clause_id: LRM-OWNED-ALWAYS-CLASSIFY
   lrm_section: '9.2'
   title: Owned always → always_ff classification
@@ -2458,8 +2447,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-045
-  st_id: ST-OWNED-9-045
+- id: OWNED-9-044
+  st_id: ST-OWNED-9-044
   lrm_clause_id: LRM-OWNED-ALWAYS-FF-SIM
   lrm_section: '9.4'
   title: always_ff NBA simulation (owned IR)
@@ -2469,8 +2458,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-046
-  st_id: ST-OWNED-9-046
+- id: OWNED-9-045
+  st_id: ST-OWNED-9-045
   lrm_clause_id: LRM-OWNED-PROCEDURAL-REGIONS
   lrm_section: '9.2'
   title: Owned IR active_comb / active_clocked region tags
@@ -2480,8 +2469,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-047
-  st_id: ST-OWNED-9-047
+- id: OWNED-9-046
+  st_id: ST-OWNED-9-046
   lrm_clause_id: LRM-OWNED-STATEMENT-LOWERING
   lrm_section: '9'
   title: Owned parser lowers statements into procedural IR
@@ -2491,8 +2480,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-048
-  st_id: ST-OWNED-9-048
+- id: OWNED-9-047
+  st_id: ST-OWNED-9-047
   lrm_clause_id: LRM-PARSER-ALWAYS-AT-STAR
   lrm_section: 9.2.1
   title: Parser always @* sensitivity list without parentheses
@@ -2502,8 +2491,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-049
-  st_id: ST-OWNED-9-049
+- id: OWNED-9-048
+  st_id: ST-OWNED-9-048
   lrm_clause_id: LRM-PARSER-TASK-ENDTASK-SKIP
   lrm_section: '9.2'
   title: Parser skip task/function bodies through endtask/endfunction
@@ -2513,8 +2502,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-050
-  st_id: ST-OWNED-9-050
+- id: OWNED-9-049
+  st_id: ST-OWNED-9-049
   lrm_clause_id: LRM-PARSER-UNIQUE-CASE-ONEHOT
   lrm_section: 9.2.1
   title: unique case (1'b1) one-hot identifier item guards
@@ -2524,8 +2513,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-051
-  st_id: ST-OWNED-9-051
+- id: OWNED-9-050
+  st_id: ST-OWNED-9-050
   lrm_clause_id: LRM-POST-B2-GUARDED-NBA-SIM
   lrm_section: 9.2.2
   title: POST-B2 guarded always_ff NBA branch simulation from owned IR
@@ -2535,8 +2524,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-052
-  st_id: ST-OWNED-9-052
+- id: OWNED-9-051
+  st_id: ST-OWNED-9-051
   lrm_clause_id: LRM-POST-SIM-FEATURE-BLOCKS
   lrm_section: 9.2.1
   title: Multi-cycle sim on always_ff and case-guard feature blocks
@@ -2546,8 +2535,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-053
-  st_id: ST-OWNED-9-053
+- id: OWNED-9-052
+  st_id: ST-OWNED-9-052
   lrm_clause_id: LRM-POST-SIM-REFERENCE-CYCLE
   lrm_section: 9.2.1
   title: Multi-cycle owned IR sim on reference_cycle_block
@@ -2557,8 +2546,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-054
-  st_id: ST-OWNED-9-054
+- id: OWNED-9-053
+  st_id: ST-OWNED-9-053
   lrm_clause_id: LRM-PROCEDURAL-IR-SIM-BRIDGE
   lrm_section: '9'
   title: Procedural IR metadata bridges to sim scheduler
@@ -2568,8 +2557,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-055
-  st_id: ST-OWNED-9-055
+- id: OWNED-9-054
+  st_id: ST-OWNED-9-054
   lrm_clause_id: LRM-PROCEDURAL-SCHEDULING-REGIONS
   lrm_section: '9'
   title: Procedural scheduling_region metadata (owned IR)
@@ -2579,8 +2568,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-056
-  st_id: ST-OWNED-9-056
+- id: OWNED-9-055
+  st_id: ST-OWNED-9-055
   lrm_clause_id: LRM-PROCEDURAL-STATEMENT-IR
   lrm_section: '9.2'
   title: Procedural statement IR (nba_assign, continuous_assign)
@@ -2590,8 +2579,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-057
-  st_id: ST-OWNED-9-057
+- id: OWNED-9-056
+  st_id: ST-OWNED-9-056
   lrm_clause_id: LRM-PROGRAM-BLOCKS-UNSUPPORTED
   lrm_section: '9'
   title: program blocks (roadmap)
@@ -2601,8 +2590,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-058
-  st_id: ST-OWNED-9-058
+- id: OWNED-9-057
+  st_id: ST-OWNED-9-057
   lrm_clause_id: LRM-REPEAT-UNSUPPORTED
   lrm_section: '9.6'
   title: repeat loop (roadmap)
@@ -2612,8 +2601,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-059
-  st_id: ST-OWNED-9-059
+- id: OWNED-9-058
+  st_id: ST-OWNED-9-058
   lrm_clause_id: LRM-RESET-SMOKE-LITERAL
   lrm_section: 9.2.1
   title: Reset smoke applies literal NBA when rst_n low
@@ -2623,8 +2612,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-060
-  st_id: ST-OWNED-9-060
+- id: OWNED-9-059
+  st_id: ST-OWNED-9-059
   lrm_clause_id: LRM-SCHEDULING-REGION-DRIVES-STEP
   lrm_section: '9.2'
   title: Sim step order driven by procedural scheduling_region list
@@ -2634,8 +2623,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-061
-  st_id: ST-OWNED-9-061
+- id: OWNED-9-060
+  st_id: ST-OWNED-9-060
   lrm_clause_id: LRM-SIM-ALWAYS-COMB-OWNED
   lrm_section: '9.4'
   title: always_comb owned parse and IR
@@ -2645,8 +2634,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-062
-  st_id: ST-OWNED-9-062
+- id: OWNED-9-061
+  st_id: ST-OWNED-9-061
   lrm_clause_id: LRM-SIM-ALWAYS-FF-DEPTH
   lrm_section: '9.2'
   title: always_ff IR simulation depth
@@ -2656,8 +2645,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-063
-  st_id: ST-OWNED-9-063
+- id: OWNED-9-062
+  st_id: ST-OWNED-9-062
   lrm_clause_id: LRM-SIM-CASE-GUARDED-DEFAULT
   lrm_section: 9.4.1
   title: Case mux with guarded arms and default fallback
@@ -2667,8 +2656,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-064
-  st_id: ST-OWNED-9-064
+- id: OWNED-9-063
+  st_id: ST-OWNED-9-063
   lrm_clause_id: LRM-SIM-CASE-MUX
   lrm_section: 9.4.1
   title: IR sim case arm selection via sel port
@@ -2678,8 +2667,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-065
-  st_id: ST-OWNED-9-065
+- id: OWNED-9-064
+  st_id: ST-OWNED-9-064
   lrm_clause_id: LRM-SIM-COMB-FROM-STATEMENTS-FLAG
   lrm_section: 9.2.2
   title: Sim JSON comb_from_statements observability
@@ -2689,8 +2678,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-066
-  st_id: ST-OWNED-9-066
+- id: OWNED-9-065
+  st_id: ST-OWNED-9-065
   lrm_clause_id: LRM-SIM-COMB-GUARDED
   lrm_section: 9.2.1
   title: IR sim guarded continuous_assign selection
@@ -2700,8 +2689,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-067
-  st_id: ST-OWNED-9-067
+- id: OWNED-9-066
+  st_id: ST-OWNED-9-066
   lrm_clause_id: LRM-SIM-COMB-STATEMENT-RHS
   lrm_section: 9.2.2
   title: IR sim evaluates continuous_assign statement RHS
@@ -2711,8 +2700,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-068
-  st_id: ST-OWNED-9-068
+- id: OWNED-9-067
+  st_id: ST-OWNED-9-067
   lrm_clause_id: LRM-SIM-EXPR-EVAL-MVP
   lrm_section: '9.2'
   title: Owned sim MVP expression eval (^, |, &, literals)
@@ -2722,8 +2711,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-069
-  st_id: ST-OWNED-9-069
+- id: OWNED-9-068
+  st_id: ST-OWNED-9-068
   lrm_clause_id: LRM-SIM-HIER-RELATIVE-PROC
   lrm_section: 9.2.1
   title: Simulator relative procedural lhs when hier_path_export relative
@@ -2733,8 +2722,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-070
-  st_id: ST-OWNED-9-070
+- id: OWNED-9-069
+  st_id: ST-OWNED-9-069
   lrm_clause_id: LRM-SIM-IF-EXPR-GUARD
   lrm_section: 9.2.1
   title: IR sim evaluates if_expr comb guard expressions
@@ -2744,8 +2733,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-071
-  st_id: ST-OWNED-9-071
+- id: OWNED-9-070
+  st_id: ST-OWNED-9-070
   lrm_clause_id: LRM-SIM-INIT-OVERRIDE
   lrm_section: '9.4'
   title: sim_init signal overrides in design JSON
@@ -2755,8 +2744,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-072
-  st_id: ST-OWNED-9-072
+- id: OWNED-9-071
+  st_id: ST-OWNED-9-071
   lrm_clause_id: LRM-SIM-LITERAL-NBA
   lrm_section: 9.2.1
   title: IR sim literal nba_assign (1'b0) on async reset
@@ -2766,8 +2755,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-073
-  st_id: ST-OWNED-9-073
+- id: OWNED-9-072
+  st_id: ST-OWNED-9-072
   lrm_clause_id: LRM-SIM-MULTI-CYCLE-EVENTS
   lrm_section: '9'
   title: IR sim multi-cycle clock events
@@ -2777,8 +2766,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-074
-  st_id: ST-OWNED-9-074
+- id: OWNED-9-073
+  st_id: ST-OWNED-9-073
   lrm_clause_id: LRM-SIM-MULTIBIT-LITERAL-NBA
   lrm_section: 9.2.1
   title: Multi-bit literal NBA values in sim
@@ -2788,8 +2777,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-075
-  st_id: ST-OWNED-9-075
+- id: OWNED-9-074
+  st_id: ST-OWNED-9-074
   lrm_clause_id: LRM-SIM-NBA-BRANCH-GUARDED
   lrm_section: 9.2.1
   title: IR sim if-guarded NBA branch selection per cycle
@@ -2799,8 +2788,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-076
-  st_id: ST-OWNED-9-076
+- id: OWNED-9-075
+  st_id: ST-OWNED-9-075
   lrm_clause_id: LRM-SIM-NBA-ORDERING
   lrm_section: '9'
   title: IR sim NBA ordering smoke
@@ -2810,8 +2799,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-077
-  st_id: ST-OWNED-9-077
+- id: OWNED-9-076
+  st_id: ST-OWNED-9-076
   lrm_clause_id: LRM-SIM-NBA-STATEMENT-EDGES
   lrm_section: 9.2.1
   title: IR sim NBA edges from procedural statement IR
@@ -2821,8 +2810,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-078
-  st_id: ST-OWNED-9-078
+- id: OWNED-9-077
+  st_id: ST-OWNED-9-077
   lrm_clause_id: LRM-SIM-NESTED-DEFAULT-BEGIN
   lrm_section: 9.4.1
   title: Nested case default begin block with guarded if in sim mux
@@ -2832,8 +2821,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-079
-  st_id: ST-OWNED-9-079
+- id: OWNED-9-078
+  st_id: ST-OWNED-9-078
   lrm_clause_id: LRM-SIM-NESTED-DEFAULT-BEGIN-DEPTH
   lrm_section: 9.4.1
   title: Triple-nested case default begin if-else sim mux depth
@@ -2843,8 +2832,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-080
-  st_id: ST-OWNED-9-080
+- id: OWNED-9-079
+  st_id: ST-OWNED-9-079
   lrm_clause_id: LRM-SIM-NESTED-DEFAULT-BEGIN-ELSE
   lrm_section: 9.4.1
   title: Nested case default begin block with if-else guarded arms
@@ -2854,8 +2843,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-081
-  st_id: ST-OWNED-9-081
+- id: OWNED-9-080
+  st_id: ST-OWNED-9-080
   lrm_clause_id: LRM-SIM-NESTED-DEFAULT-GUARD
   lrm_section: 9.4.1
   title: Nested case default with inner if guard in sim mux
@@ -2865,8 +2854,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-082
-  st_id: ST-OWNED-9-082
+- id: OWNED-9-081
+  st_id: ST-OWNED-9-081
   lrm_clause_id: LRM-SIM-NESTED-DEFAULT-IF-ELSE
   lrm_section: 9.4.1
   title: Nested case default with if-else guarded arms in sim mux
@@ -2876,8 +2865,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-083
-  st_id: ST-OWNED-9-083
+- id: OWNED-9-082
+  st_id: ST-OWNED-9-082
   lrm_clause_id: LRM-SIM-OR-GUARD
   lrm_section: 9.2.1
   title: IR sim single | OR in if_expr comb guards
@@ -2887,8 +2876,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-084
-  st_id: ST-OWNED-9-084
+- id: OWNED-9-083
+  st_id: ST-OWNED-9-083
   lrm_clause_id: LRM-SIM-ORCHESTRATION-PROFILES
   lrm_section: '9'
   title: IR sim comb + clocked profile orchestration
@@ -2898,8 +2887,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-085
-  st_id: ST-OWNED-9-085
+- id: OWNED-9-084
+  st_id: ST-OWNED-9-084
   lrm_clause_id: LRM-SIM-REGION-SCHEDULED
   lrm_section: '9'
   title: IR sim profile detection from scheduling_region metadata
@@ -2909,8 +2898,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-086
-  st_id: ST-OWNED-9-086
+- id: OWNED-9-085
+  st_id: ST-OWNED-9-085
   lrm_clause_id: LRM-SIM-RESET-DEASSERT
   lrm_section: '9.2'
   title: IR sim async reset deassert smoke
@@ -2920,8 +2909,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-087
-  st_id: ST-OWNED-9-087
+- id: OWNED-9-086
+  st_id: ST-OWNED-9-086
   lrm_clause_id: LRM-SIM-SMOKE
   lrm_section: '9'
   title: IR simulation smoke (tiny_counter)
@@ -2931,8 +2920,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-088
-  st_id: ST-OWNED-9-088
+- id: OWNED-9-087
+  st_id: ST-OWNED-9-087
   lrm_clause_id: LRM-SIM-STATEMENT-AWARE
   lrm_section: '9'
   title: IR sim uses statement-derived NBA edges (roadmap)
@@ -2942,8 +2931,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-089
-  st_id: ST-OWNED-9-089
+- id: OWNED-9-088
+  st_id: ST-OWNED-9-088
   lrm_clause_id: LRM-SIM-STATEMENT-NBA-LOAD
   lrm_section: 9.2.1
   title: load_nba_edges prefers procedural nba_assign statements
@@ -2953,8 +2942,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-090
-  st_id: ST-OWNED-9-090
+- id: OWNED-9-089
+  st_id: ST-OWNED-9-089
   lrm_clause_id: LRM-SIM-TRIPLE-NESTED-SEL3
   lrm_section: 9.4.1
   title: Triple-nested case sel3 default begin guarded arms
@@ -2964,8 +2953,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-091
-  st_id: ST-OWNED-9-091
+- id: OWNED-9-090
+  st_id: ST-OWNED-9-090
   lrm_clause_id: LRM-SIM-UNIFIED-SCHEDULER
   lrm_section: '9'
   title: IR sim unified comb+seq scheduling (one design)
@@ -2975,8 +2964,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-092
-  st_id: ST-OWNED-9-092
+- id: OWNED-9-091
+  st_id: ST-OWNED-9-091
   lrm_clause_id: LRM-UNIFIED-COMB-STATEMENT
   lrm_section: '9.2'
   title: Unified comb+ff sim with statement comb region
@@ -2986,8 +2975,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-093
-  st_id: ST-OWNED-9-093
+- id: OWNED-9-092
+  st_id: ST-OWNED-9-092
   lrm_clause_id: LRM-UNIFIED-GUARDED-NBA
   lrm_section: '9.2'
   title: Unified comb+ff guarded NBA on reset smoke
@@ -2997,8 +2986,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-094
-  st_id: ST-OWNED-9-094
+- id: OWNED-9-093
+  st_id: ST-OWNED-9-093
   lrm_clause_id: LRM-UNIFIED-STATEMENT-NBA
   lrm_section: '9.2'
   title: Unified comb+ff sim reports nba_from_statements
@@ -3008,8 +2997,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-095
-  st_id: ST-OWNED-9-095
+- id: OWNED-9-094
+  st_id: ST-OWNED-9-094
   lrm_clause_id: LRM-WAIT-UNSUPPORTED
   lrm_section: '9.7'
   title: wait / wait_order (roadmap)
@@ -3019,8 +3008,8 @@ units:
   chapter: '9'
   status: pending
   contract_template: schemas/clause_factory_contract.yaml
-- id: OWNED-9-096
-  st_id: ST-OWNED-9-096
+- id: OWNED-9-095
+  st_id: ST-OWNED-9-095
   lrm_clause_id: LRM-WHILE-UNSUPPORTED
   lrm_section: '9.6'
   title: while / do-while loops (roadmap)

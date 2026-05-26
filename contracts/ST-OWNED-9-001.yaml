@@ -1,0 +1,18 @@
+schema_version: "1.0"
+st_id: ST-OWNED-9-001
+lrm_clause_id: LRM-ACTIVE-CLOCKED-REGION-SIM
+title: active_clocked region NBA after posedge
+status: completed
+
+owned_must:
+  - AlwaysFF procedural IR tagged scheduling_region active_clocked.
+  - Unified sim steps comb region then posedge + NBA in active_clocked region.
+
+tests:
+  m5_test_id: test_sv_m5_310_owned_active_clocked_nba_after_posedge
+  feature_test_stem: comb_plus_ff
+
+promotion:
+  from_status: partial
+  to_status: supported
+  completed: true

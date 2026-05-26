@@ -253,6 +253,7 @@ Optional: script `scripts/autopilot_metrics.py` prints gap burn-down from index.
 |----|-------------|----------|
 | AP-01 | `scripts/pick_next_owned_task.py` | **Done** — deterministic work queue |
 | AP-02 | `scripts/run_owned_autopilot.sh` | **Done** — one-command tick |
+| AP-02b | `scripts/implement_tranche.py` | **Done** — registered implement tranches |
 | AP-03 | `scripts/apply_council_verdict.py` | Resume after council |
 | AP-04 | `docs/orchestration/next_handoff.md` template | Agent dispatch |
 | AP-05 | `.cursor/skills/sv-owned-lrm-autopilot/SKILL.md` | Cursor-native loop |

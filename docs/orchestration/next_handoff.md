@@ -1,27 +1,27 @@
 # Autopilot handoff
 
-**Generated:** 2026-05-26T11:02:41Z
+**Generated:** 2026-05-26T11:09:10Z
 **Autopilot level:** 3
 **Plan:** `docs/plans/2026-05-28-owned-lrm-full-autopilot.md`
 
-## Task 1: `ST-OWNED-9-001`
+## Task 1: `ST-OWNED-9-002`
 
 - **Action:** `implement`
-- **Title:** OWNED: active_clocked region NBA after posedge
+- **Title:** OWNED: always_comb
 - **Track:** B
-- **LRM clause:** `LRM-ACTIVE-CLOCKED-REGION-SIM`
+- **LRM clause:** `LRM-ALWAYS-COMB`
 - **Pod:** `parser_always`
-- **Score:** 7459
+- **Score:** 7448
 
 ### Deliverables
 
-- contracts/ST-OWNED-9-001.yaml
+- contracts/ST-OWNED-9-002.yaml
 - sv_frontend: owned implementation
-- SV_UPF_SPEC: promote LRM-ACTIVE-CLOCKED-REGION-SIM to supported/owned
+- SV_UPF_SPEC: promote LRM-ALWAYS-COMB to supported/owned
 
 ### Verification
 
-- slang parity >=0.99; lrm_clause_id=LRM-ACTIVE-CLOCKED-REGION-SIM; run_autopilot_gate.sh
+- slang parity >=0.99; lrm_clause_id=LRM-ALWAYS-COMB; run_autopilot_gate.sh
 
 ### Agent steps
 

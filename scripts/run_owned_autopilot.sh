@@ -81,6 +81,7 @@ PY
 
 if [[ "$AUTO_LOOPS" != "0" ]]; then
   echo "== owned autopilot AUTO mode (max $AUTO_LOOPS loops) =="
+  export OWNED_AUTOPILOT_AUTO=1
   for ((i = 1; i <= AUTO_LOOPS; i++)); do
     echo ""
     echo "== auto loop $i / $AUTO_LOOPS =="
@@ -93,8 +94,8 @@ if [[ "$AUTO_LOOPS" != "0" ]]; then
     if run_execute; then
       continue
     fi
-    echo "Auto loop stopped at implement pick (loop $i). See $HANDOFF"
-    exit 0
+    echo "WARN: pick not executed (unregistered implement or error); continuing auto loop. See $HANDOFF"
+    continue
   done
   echo "OK: auto loop finished"
   exit 0

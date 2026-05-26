@@ -8,7 +8,9 @@ Roadmap titles classify as defer_roadmap. Honors depends_on + backlog_status_ove
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone
@@ -24,6 +26,20 @@ PROGRAM_STATE = ROOT / "docs" / "orchestration" / "program_state.yaml"
 FILE_OWNERSHIP = ROOT / "docs" / "orchestration" / "FILE_OWNERSHIP.yaml"
 GAP_SUMMARY = ROOT / "docs" / "orchestration" / "owned_gap_summary.yaml"
 HANDOFF_PLAN = ROOT / "docs" / "plans" / "2026-05-28-owned-lrm-full-autopilot.md"
+IMPLEMENT_TRANCHE = ROOT / "scripts" / "implement_tranche.py"
+
+
+def registered_implement_ids() -> frozenset[str]:
+    if not IMPLEMENT_TRANCHE.is_file():
+        return frozenset()
+    spec = importlib.util.spec_from_file_location("implement_tranche", IMPLEMENT_TRANCHE)
+    if spec is None or spec.loader is None:
+        return frozenset()
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    tranches = getattr(mod, "TRANCHES", {})
+    return frozenset(tranches.keys())
+
 
 TERMINAL = frozenset({"completed", "deferred", "cancelled"})
 ACTIVE_STATUSES = frozenset({"pending", "in_progress", "blocked"})
@@ -221,6 +237,12 @@ def pick_candidates(
         if not deps_satisfied(t, status_by_id):
             continue
         action = classify(t)
+        if (
+            os.environ.get("OWNED_AUTOPILOT_AUTO") == "1"
+            and action == "implement"
+            and tid not in registered_implement_ids()
+        ):
+            continue
         picks.append(
             {
                 "id": tid,

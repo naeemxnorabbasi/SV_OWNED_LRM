@@ -44,7 +44,11 @@ apply_pick() {
       python3 "$PICKER" --apply-complete "$id"
       ;;
     implement)
-      echo "  implement: $id (agent must execute — not auto-coded)"
+      if python3 "$ROOT/scripts/implement_tranche.py" "$id"; then
+        echo "  implement: $id (registered tranche complete)"
+        return 0
+      fi
+      echo "  implement: $id (no registered tranche — agent must execute)"
       return 1
       ;;
     *)
@@ -67,6 +71,7 @@ main() {
   local failed=0
   local deferred=0
   local completed=0
+  local implemented=0
   while read -r line; do
     id="$(python3 -c "import json,sys; print(json.loads(sys.argv[1])['id'])" "$line")"
     action="$(python3 -c "import json,sys; print(json.loads(sys.argv[1])['action'])" "$line")"
@@ -76,6 +81,7 @@ main() {
     if apply_pick "$id" "$action" "$lrm" "$title"; then
       [[ "$action" == "defer_roadmap" ]] && deferred=$((deferred + 1))
       [[ "$action" == "close_gate" ]] && completed=$((completed + 1))
+      [[ "$action" == "implement" ]] && implemented=$((implemented + 1))
     else
       failed=1
     fi
@@ -83,8 +89,8 @@ main() {
 
   python3 "$ROOT/scripts/generate_owned_backlog.py" >/dev/null
 
-  if [[ "$deferred" -gt 0 || "$completed" -gt 0 ]]; then
-    python3 - <<PY "$ROOT" "$deferred" "$completed"
+  if [[ "$deferred" -gt 0 || "$completed" -gt 0 || "$implemented" -gt 0 ]]; then
+    python3 - <<PY "$ROOT" "$deferred" "$completed" "$implemented"
 import sys
 from pathlib import Path
 import yaml
@@ -92,6 +98,7 @@ import yaml
 root = Path(sys.argv[1])
 deferred = int(sys.argv[2])
 completed = int(sys.argv[3])
+implemented = int(sys.argv[4])
 path = root / "docs/orchestration/program_state.yaml"
 prog = yaml.safe_load(path.read_text(encoding="utf-8"))
 auto = dict(prog.get("autopilot") or {})
@@ -99,6 +106,8 @@ if deferred:
     auto["tasks_deferred"] = int(auto.get("tasks_deferred") or 0) + deferred
 if completed:
     auto["chapter_gates_closed"] = int(auto.get("chapter_gates_closed") or 0) + completed
+if implemented:
+    auto["tasks_completed"] = int(auto.get("tasks_completed") or 0) + implemented
 prog["autopilot"] = auto
 path.write_text(yaml.safe_dump(prog, sort_keys=False, allow_unicode=True, width=100), encoding="utf-8")
 PY
