@@ -43,9 +43,9 @@ autopilot:
 parallel_dispatch:
   max: 1
   note: Increase to 3 when running parallel agents with disjoint FILE_OWNERSHIP pods
-last_completed_subtask: ST-OWNED-9-007
-last_completed_lrm_clause: LRM-ALWAYS-FF-STATEMENT-BODY
-last_product_commit: 903e0a6
+last_completed_subtask: ST-OWNED-9-016
+last_completed_lrm_clause: LRM-EVENT-REGION-ORDER
+last_product_commit: pending
 next_orchestrator_actions:
 - 'ST-OWNED-9-080: defer_roadmap'
 gates:
