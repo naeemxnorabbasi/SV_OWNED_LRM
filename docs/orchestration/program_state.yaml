@@ -14,11 +14,11 @@ repos:
 metrics:
   lrm_index_source: ../SV_UPF_SPEC/SV_SPEC/lrm_clause_index.yaml
   lrm_index_total: 449
-  gap_clauses: 273
-  st_owned_clause_tasks: 273
+  gap_clauses: 266
+  st_owned_clause_tasks: 266
   st_chapter_gates: 26
   st_wave0_tasks: 7
-  backlog_total_subtasks: 306
+  backlog_total_subtasks: 299
 generator:
   script: scripts/generate_owned_backlog.py
   registry: docs/orchestration/OWNED_WAVE_REGISTRY.yaml
@@ -31,7 +31,7 @@ autopilot:
   driver_script: scripts/run_owned_autopilot.sh
   handoff: docs/orchestration/next_handoff.md
   ticks_total: 129
-  tasks_completed: 1
+  tasks_completed: 7
   tasks_deferred: 62
   council_escalations: 0
   gate_fail_streak: 0
